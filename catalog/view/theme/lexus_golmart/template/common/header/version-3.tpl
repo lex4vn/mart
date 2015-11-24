@@ -14,14 +14,6 @@
 <nav id="topbar">
   <div class="container">
     <div class="topbar-wrap clearfix">
-      <div class="pull-left">
-      <div class="quick-user pull-left">
-      <?php echo $language; ?>
-      </div>  
-      <div class="quick-user pull-left">
-      <?php echo $currency; ?>
-      </div> 
-    </div>
      <div class="quick-setting pull-left hidden-lg hidden-md hidden-sm">
         <div class="quickaccess-toggle">
           <span><?php echo $objlang->get('text_setting');?></span><i class="fa fa-angle-down"></i>
