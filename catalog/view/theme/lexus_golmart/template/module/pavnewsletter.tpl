@@ -8,7 +8,7 @@
                 	<h4 class="newsletter-label"><?php echo $objlang->get("button_subscribe");?></h4>   
                 </div>
                     <div class="input-group">
-                        <input type="text" placeholder="Enter your email..." class="form-control email" <?php if(!isset($customer_email)): ?> <?php endif; ?> size="18" name="email">
+                        <input type="text" placeholder="<?php echo $objlang->get("default_input_text");?>" class="form-control email" <?php if(!isset($customer_email)): ?> <?php endif; ?> size="18" name="email">
                         <span class="input-group-btn">
                             <button type="submit" name="submitNewsletter" class="btn btn-sm btn-primary">
                             <i class="fa fa-angle-right font-size-24"></i></button>
