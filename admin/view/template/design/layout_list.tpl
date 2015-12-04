@@ -52,7 +52,7 @@
                     <?php } else { ?>
                     <input type="checkbox" name="selected[]" value="<?php echo $layout['layout_id']; ?>" />
                     <?php } ?></td>
-                  <td class="text-left"><?php echo $layout['name']; ?></td>
+                  <td class="text-left"><a href="<?php echo $layout['edit']; ?>" ><?php echo $layout['name']; ?></a></td>
                   <td class="text-right"><a href="<?php echo $layout['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>

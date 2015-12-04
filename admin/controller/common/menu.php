@@ -11,6 +11,10 @@ class ControllerCommonMenu extends Controller {
 		$data['text_attribute_group'] = $this->language->get('text_attribute_group');
 		$data['text_backup'] = $this->language->get('text_backup');
 		$data['text_banner'] = $this->language->get('text_banner');
+		$data['text_bannerslideshow'] = $this->language->get('text_bannerslideshow');
+		$data['text_interface'] = $this->language->get('text_interface');
+		$data['text_news'] = $this->language->get('text_news');
+		$data['text_captcha'] = $this->language->get('text_captcha');
 		$data['text_catalog'] = $this->language->get('text_catalog');
 		$data['text_category'] = $this->language->get('text_category');
 		$data['text_confirm'] = $this->language->get('text_confirm');
@@ -31,6 +35,7 @@ class ControllerCommonMenu extends Controller {
 		$data['text_error_log'] = $this->language->get('text_error_log');
 		$data['text_extension'] = $this->language->get('text_extension');
 		$data['text_feed'] = $this->language->get('text_feed');
+		$data['text_fraud'] = $this->language->get('text_fraud');
 		$data['text_filter'] = $this->language->get('text_filter');
 		$data['text_geo_zone'] = $this->language->get('text_geo_zone');
 		$data['text_dashboard'] = $this->language->get('text_dashboard');
@@ -114,6 +119,10 @@ class ControllerCommonMenu extends Controller {
 		$data['attribute_group'] = $this->url->link('catalog/attribute_group', 'token=' . $this->session->data['token'], 'SSL');
 		$data['backup'] = $this->url->link('tool/backup', 'token=' . $this->session->data['token'], 'SSL');
 		$data['banner'] = $this->url->link('design/banner', 'token=' . $this->session->data['token'], 'SSL');
+        $data['bannerslideshow'] = $this->url->link('module/pavsliderlayer', 'token=' . $this->session->data['token'], 'SSL');
+        $data['interface'] = $this->url->link('module/themecontrol', 'token=' . $this->session->data['token'], 'SSL');
+        $data['news'] = $this->url->link('module/pavblog', 'token=' . $this->session->data['token'], 'SSL');
+		$data['captcha'] = $this->url->link('extension/captcha', 'token=' . $this->session->data['token'], 'SSL');
 		$data['category'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'], 'SSL');
 		$data['country'] = $this->url->link('localisation/country', 'token=' . $this->session->data['token'], 'SSL');
 		$data['contact'] = $this->url->link('marketing/contact', 'token=' . $this->session->data['token'], 'SSL');

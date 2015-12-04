@@ -68,7 +68,7 @@ $_['text_review']           = 'Nhận xét';
 $_['text_return']           = 'Đổi / Trả hàng';
 $_['text_return_action']    = 'Các hoạt động trả hàng';
 $_['text_return_reason']    = 'Lý do trả hàng';
-$_['text_return_status']    = 'Tình trạng trả hàng';
+$_['text_return_status']    = 'Đơn hàng';
 $_['text_sale']             = 'Bán hàng';
 $_['text_shipping']         = 'Vận chuyển';
 $_['text_setting']          = 'Thiết lập';
@@ -89,4 +89,8 @@ $_['text_weight_class']     = 'Trọng Lượng';
 $_['text_length_class']     = 'Chiều dài';
 $_['text_zone']             = 'Vùng';
 $_['text_recurring_profile']           = 'Recurring Profiles';
+$_['text_complete_status']           = 'Hoàn thành';
+$_['text_online']           = 'Người dùng online';
+$_['text_approval']           = 'Chờ xác nhận';
+$_['text_stock']           = 'Hàng hết';
 ?>

@@ -37,22 +37,26 @@
                 <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
                 <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
               </div>
+			</div>
+            <div class="col-sm-2">
               <div class="form-group">
                 <label class="control-label" for="input-model"><?php echo $entry_model; ?></label>
                 <input type="text" name="filter_model" value="<?php echo $filter_model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
               <div class="form-group">
                 <label class="control-label" for="input-price"><?php echo $entry_price; ?></label>
                 <input type="text" name="filter_price" value="<?php echo $filter_price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
               </div>
+            </div>
+            <div class="col-sm-2">			  
               <div class="form-group">
                 <label class="control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
               <div class="form-group">
                 <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <select name="filter_status" id="input-status" class="form-control">
@@ -122,7 +126,7 @@
                     <?php } else { ?>
                     <span class="img-thumbnail list"><i class="fa fa-camera fa-2x"></i></span>
                     <?php } ?></td>
-                  <td class="text-left"><?php echo $product['name']; ?></td>
+                  <td class="text-left"><a href="<?php echo $product['edit']; ?>"><?php echo $product['name']; ?></a></td>
                   <td class="text-left"><?php echo $product['model']; ?></td>
                   <td class="text-right"><?php if ($product['special']) { ?>
                     <span style="text-decoration: line-through;"><?php echo $product['price']; ?></span><br/>
