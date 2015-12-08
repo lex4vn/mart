@@ -118,7 +118,7 @@ $vertical-line-height:              normal !default; */
 /* Curl Top Right */
 /**absolute**/
 /* links style */
-@import url(http://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300|Rhodium+Libre);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 ul.links {
   padding: 0;
   position: relative;
@@ -3644,7 +3644,7 @@ hr.divider-snow {
 }
 .latest-posts-v4 .latest-posts-title {
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   text-transform: none;
   margin-top: 0;
@@ -6142,7 +6142,7 @@ body[class*="page-product"] #content .owl-carousel {
 }
 
 .price {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 .price .price-new {
@@ -6193,7 +6193,7 @@ body[class*="page-product"] #content .owl-carousel {
 .product-block .name {
   margin: 0;
   font-size: 13px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: capitalize;
   min-height: 30px;
 }
@@ -7175,7 +7175,7 @@ body[class*="page-product"] #content .owl-carousel {
   text-transform: uppercase;
   top: 0;
   transform: translateZ(0px);
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 .rtl .badges.new, .rtl .badges.hot {
@@ -7348,7 +7348,7 @@ body[class*="page-product"] #content .owl-carousel {
   font-size: 13px;
   color: #000000;
   background-color: transparent !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-transition: all 350ms ease-out;
   -o-transition: all 350ms ease-out;
   transition: all 350ms ease-out;
@@ -8157,7 +8157,7 @@ body .owl-carousel {
   color: #FFFFFF;
   margin: 0;
   font-size: 13px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 #cart .dropdown-menu {
@@ -9341,7 +9341,7 @@ body .owl-carousel {
   padding: 8px 0;
 }
 .verticalmenu .dropdown-menu ul > li > a {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #666;
 }
 .verticalmenu .dropdown-menu ul > li > a:hover {
@@ -9712,7 +9712,7 @@ body .owl-carousel {
   font-size: 18px;
   line-height: 25px;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 .box-module-pavreassurances .column {
