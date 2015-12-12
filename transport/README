@@ -1,0 +1,5 @@
+It's management website to help user can request new site:
+	- Choose template.
+	- Choose domain.
+	- Request new site with the above options.
+	- Communicate with auto-deploy component.
