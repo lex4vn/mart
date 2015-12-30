@@ -13,9 +13,7 @@
 <h3><?php echo sprintf($text_edit_menu, $menu['title'], $menu['verticalmenu_id']);?></h3>
 <?php } else { ?><h3><?php echo $text_create_new;?></h3><?php } ?>
 <div>
-
 	<h4><?php echo $objlang->get('entry_menu_information');?></h4>
-
 	<ul class="nav nav-tabs" id="language-<?php echo $module_row; ?>">
 		<?php foreach ($languages as $language) { ?>
 		<li>
@@ -23,8 +21,6 @@
 		</li>
 		<?php } ?>
 	</ul>
-
-
 	<div class="tab-content">
 		<?php foreach ($languages as $language) { ?>
 		<div class="tab-pane" id="tab-language-<?php echo $language['language_id']; ?>">

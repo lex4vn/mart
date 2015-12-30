@@ -204,21 +204,21 @@
 										<div class="col-sm-10">
 											<input class="form-control" id="searchTextField" name="themecontrol[location_address]" type="text" value="<?php echo isset($module['location_address'])?$module['location_address']:''; ?>" placeholder="<?php echo $olang->get('text_location_address'); ?>" autocomplete="on" runat="server" size="60"/>
 										</div>
-									</div>	
+									</div>
 
 									<div class="form-group">
 										<label class="col-sm-2 control-label" id="text_contact_googlemap"><?php echo $olang->get('location_latitude');?></label>
 										<div class="col-sm-10">
 											<input class="form-control" id="location_latitude" name="themecontrol[location_latitude]" value="<?php echo isset($module['location_latitude'])?$module['location_latitude']:''; ?>" size="30"/>
 										</div>
-									</div>	
+									</div>
 
 									<div class="form-group">
 										<label class="col-sm-2 control-label" id="text_contact_googlemap"><?php echo $olang->get('location_longitude');?></label>
 										<div class="col-sm-10">
 											<input class="form-control" id="location_longitude" name="themecontrol[location_longitude]" value="<?php echo isset($module['location_longitude'])?$module['location_longitude']:''; ?>" size="30"/>
 										</div>
-									</div>	
+									</div>
 
 								<div>
 									<h4 class="col-sm-2"><?php echo $olang->get('text_contact_html');?></h4>
@@ -230,24 +230,24 @@
 									  		</li>
 									  	<?php } ?>
 									  	</ul>
-	 
-					  			 		 
+
+
 									  	<div class="tab-content">
 				  			 			<?php foreach( $languages as $language ) {  ?>
 				  			 				<div class="tab-pane" id="tab-lang-contact-page<?php echo $language['language_id'];?>">
 				  			 					<?php
 				  			 						$contact_customhtml = isset($module['contact_customhtml'][$language['language_id']])?
-				  			 						$module['contact_customhtml'][$language['language_id']]:""; 
+				  			 						$module['contact_customhtml'][$language['language_id']]:"";
 				  			 					 ?>
-				  			 				 
-				  			  
+
+
 				  			 					<textarea style="width:90%; height:300px" id="contact_customhtml<?php echo $language['language_id'];?>" name="themecontrol[contact_customhtml][<?php echo $language['language_id'];?>]"><?php echo $contact_customhtml;?></textarea>
 				  		 					</div>
-				  			 			<?php } ?>	
+				  			 			<?php } ?>
 			 							</div>
-			 						</div>	
-		 						</div>	
-			  			 	</div>		
+			 						</div>
+		 						</div>
+			  			 	</div>
 			  			 </div>
 
 			  			</div>  <div class="clear clearfix"></div>

@@ -4,7 +4,7 @@ class ControllerCommonMenu extends Controller {
 		$this->load->language('common/menu');
 		$data['pavo_link'] = $this->url->link('module/themecontrol', 'token=' . $this->session->data['token'], 'SSL');
 		$data['megamenu_link'] = $this->url->link('module/pavmegamenu', 'token=' . $this->session->data['token'], 'SSL');
-
+        $data['text_analytics'] = $this->language->get('text_analytics');
 		$data['text_affiliate'] = $this->language->get('text_affiliate');
 		$data['text_api'] = $this->language->get('text_api');
 		$data['text_attribute'] = $this->language->get('text_attribute');
@@ -111,7 +111,14 @@ class ControllerCommonMenu extends Controller {
 		$data['text_openbay_links'] = $this->language->get('text_openbay_links');
 		$data['text_openbay_report_price'] = $this->language->get('text_openbay_report_price');
 		$data['text_openbay_order_import'] = $this->language->get('text_openbay_order_import');
+		$data['text_pavverticalmenu'] = $this->language->get('text_pavverticalmenu');
+		$data['text_pavmegamenu'] = $this->language->get('text_pavmegamenu');
+		$data['text_footer'] = $this->language->get('text_footer');
 
+        $data['footer'] = $this->url->link('module/footer', 'token=' . $this->session->data['token'], 'SSL');
+        $data['pavmegamenu'] = $this->url->link('module/pavmegamenu', 'token=' . $this->session->data['token'], 'SSL');
+        $data['pavverticalmenu'] = $this->url->link('module/pavverticalmenu', 'token=' . $this->session->data['token'], 'SSL');
+        $data['analytics'] = $this->url->link('extension/analytics', 'token=' . $this->session->data['token'], 'SSL');
 		$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL');
 		$data['affiliate'] = $this->url->link('marketing/affiliate', 'token=' . $this->session->data['token'], 'SSL');
 		$data['api'] = $this->url->link('user/api', 'token=' . $this->session->data['token'], 'SSL');

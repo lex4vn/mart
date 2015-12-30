@@ -307,7 +307,7 @@ class ControllerModuleThemeControl extends Controller {
 			if( $a == 'save-edit'  ){
 				$this->response->redirect($this->url->link('module/'.$this->moduleName, 'token=' . $this->session->data['token'], 'SSL'));
 			}else {
-				$this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
+				$this->response->redirect($this->url->link('module/'.$this->moduleName, 'token='. $this->session->data['token'], 'SSL'));
 			}
 		}
 		
@@ -468,12 +468,7 @@ class ControllerModuleThemeControl extends Controller {
       		'separator' => false
    		);
 
-   		$this->mdata['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('text_module'),
-			'href'      => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
-   		);
-		
+
    		$this->mdata['breadcrumbs'][] = array(
        		'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('module/'.$this->moduleName, 'token=' . $this->session->data['token'], 'SSL'),

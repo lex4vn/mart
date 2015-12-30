@@ -17,6 +17,7 @@ $_['text_content_bottom'] = 'Content Bottom';
 $_['text_column_left']    = 'Column Left';
 $_['text_column_right']   = 'Column Right';
 $_['text_adv_top_head']   = 'Quảng cáo Top Head';
+$_['text_footer']   = 'Footer';
 // Entry
 $_['entry_name']        = 'Tên bố cục:';
 $_['entry_store']       = 'Shop:';

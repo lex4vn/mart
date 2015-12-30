@@ -102,7 +102,6 @@ class ControllerModulePavsliderlayer extends Controller {
 				$this->request->post['pavsliderlayer_module'] = array();
 			}
 
-			//echo "<pre>"; print_r($this->request->post); die;
 			if( $this->request->post['action_mode'] == 'module-only' ) {
 
 		
@@ -174,12 +173,6 @@ class ControllerModulePavsliderlayer extends Controller {
    		);
 
    		$this->mdata['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('text_module'),
-			'href'      => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
-   		);
-		
-   		$this->mdata['breadcrumbs'][] = array(
        		'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('module/pavsliderlayer', 'token=' . $this->session->data['token'], 'SSL'),
       		'separator' => ' :: '
@@ -210,7 +203,7 @@ class ControllerModulePavsliderlayer extends Controller {
 
 		$this->mdata['actionImport'] = $this->url->link('module/pavsliderlayer/import', 'token=' . $this->session->data['token'], 'SSL');
 
-		$this->mdata['cancel'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
+		$this->mdata['cancel'] = $this->url->link('module/pavsliderlayer', 'token=' . $this->session->data['token'], 'SSL');
 		$this->mdata['token'] = $this->session->data['token'];
 		$this->mdata['modules'] = array();
 
@@ -391,12 +384,6 @@ class ControllerModulePavsliderlayer extends Controller {
       		'separator' => false
    		);
 
-   		$this->mdata['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('text_module'),
-			'href'      => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
-   		);
-		
    		$this->mdata['breadcrumbs'][] = array(
        		'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('module/pavsliderlayer', 'token=' . $this->session->data['token'], 'SSL'),

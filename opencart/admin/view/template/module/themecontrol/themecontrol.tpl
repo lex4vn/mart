@@ -3,14 +3,9 @@
 <?php   
 	$adminModuleViewDir = DIR_TEMPLATE . 'module/themecontrol/'; 
 
-
-
 	// echo '<pre>'.print_r( $module['default_theme'],1 );die;	
 ?>
 <div id="content">
-
-		 
-
  <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
@@ -35,10 +30,10 @@
 <?php } ?>
 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal" id="sform">
  	 
- 	 <div class="store-info alert alert-info">
+ 	 <div class="store-info">
 	 	<div class="row">	
-	 	  <label class="col-sm-1 control-label"><?php echo $olang->get('text_default_store'); ?></label>	
-	 	  <div class="col-sm-3">
+	 	  <label class=" hidden col-sm-1 control-label"><?php echo $olang->get('text_default_store'); ?></label>
+	 	  <div class="col-sm-3 hidden">
 	 	 	  <select class="form-control"  name="stores" id="pavstores">
 					<?php foreach($stores as $store):?>
 					<?php if($store['store_id'] == $store_id):?>
@@ -49,21 +44,15 @@
 					<?php endforeach;?>
 				</select>
 			</div>
-			<div class="col-sm-2 control-label text-align-right"><?php echo $olang->get('text_store_theme'); ?>: <strong class=" label label-danger"><?php echo $module['default_theme']; ?></strong> </div>	
+			<div class="hidden col-sm-2 control-label text-align-right"><?php echo $olang->get('text_store_theme'); ?>: <strong class=" label label-danger"><?php echo $module['default_theme']; ?></strong> </div>
 		 
-		    <div class="col-sm-6">
+		    <div class="col-sm-12">
 			    <div class="pull-right">    <button type="submit" form="sform"  data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn save-data btn-primary"><i class="fa fa-save"></i> <?php echo $text_save;?></button>
 			        <button type="button" onclick="$('#action_type').val('save-edit');"   data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-danger save-data"><i class="fa fa-save save-data"></i> <?php echo $text_saveandstay;?></button>
-			 
 			        <a href="<?php echo $cancel; ?>" data-toggle="tooltip" title="<?php echo $button_cancel; ?>" class="btn btn-default"><i class="fa fa-reply"></i></a>
-
-			       
-			      
-			    </div>    
+			    </div>
 	    	</div>
-    	
-
-		</div>	
+		</div>
 
 
  	 </div>
@@ -97,21 +86,11 @@
 		 <div id="tabs" class="htabs">
 			<ul class="nav nav-tabs nav-pills nav-tablangs" id="moduletabs">
 				 <li class="active"><a data-toggle="tab"  href="#tab-general"><span class="fa fa-gear"></span> <?php echo $tab_general; ?></a></li>
-				 <li><a data-toggle="tab"  href="#tab-pages-layout"><span class="fa fa-files-o"></span> <?php echo $olang->get('tab_modules_pages');?></a></li>
-				
 
-				 <li><a data-toggle="tab"  href="#tab-font"><span class="fa fa-font"></span> <?php echo $tab_font; ?></a></li>
 				<?php if(  isset($imodules) && is_array($imodules) ){ ?>
 				 <li><a data-toggle="tab"  href="#tab-imodules"><span class="fa fa-gears"></span> <?php echo $olang->get('tab_internal_modules');?></a></li>
 				<?php } ?>
-				 <li><a data-toggle="tab"  href="#tab-modules"><span class="fa fa-bars"></span> <?php echo $olang->get('tab_modules_layouts');?></a></li>
-				<?php if( isset($samples) && $samples )  { ?>
-				 <li><a data-toggle="tab"  href="#tab-datasample"><span class="fa fa-cloud-download"></span> <?php echo $olang->get('tab_datasample');?></a></li>
-				<?php } ?>
-				 <li><a data-toggle="tab"  href="#tab-compress"><span class="fa fa-tachometer"></span> <?php echo $olang->get('tab_compression');?></a></li>
-				 <li><a data-toggle="tab"  href="#tab-customcode"><span class="fa fa-mail-reply"></span> <?php echo $olang->get('tab_customcode');?></a></li>
-				 <li><a data-toggle="tab"  href="#tab-support"><span class="fa fa-info"></span> <?php echo $olang->get('tab_information'); ?> </a></li>
-			</ul>
+		</ul>
 		 </div>
 		 <input type="hidden" name="themecontrol[layout_id]" value="1">
 		 <input type="hidden" name="themecontrol[position]" value="1">
@@ -119,10 +98,6 @@
 
 		<div id="tab-contents" class="tab-content">
 				
-				<div id="tab-pages-layout"  class="tab-pane">
-		  			 <?php include( $adminModuleViewDir.'tab/pages-setting.tpl'); ?>
-				</div>  
-
 				<div id="tab-general"  class="tab-pane active">
 					<?php include( $adminModuleViewDir.'tab/general-setting.tpl'); ?>
 
@@ -164,9 +139,7 @@
 				
 				<?php if(  isset($imodules) && is_array($imodules) ){ ?>
 				<div id="tab-imodules"  class="tab-pane">
-					<p><?php echo $olang->get('text_explain_internal_modules'); ?></p>
-					
-					<div class="inner-modules-wrap clearfix">	 
+					<div class="inner-modules-wrap clearfix">
 						<div>
 							<ul class="nav nav-tabs" >
 							<?php  $i=0; foreach( $imodules as $key => $imod ) { ?>
@@ -177,25 +150,25 @@
 						 <div class="tab-content">
          					<?php $i=0; foreach( $imodules as $key => $imod ) { ?>
          						<div id="tab-imodule-<?php echo $key;?>" class="tab-pane <?php if( $i++ == 0){ ?> active<?php } ?>">
-         						<?php 
-         						if( is_object($imod['module'])){ 	
+         						<?php
+         						if( is_object($imod['module'])){
          							$imod['module'] = array(  $imod['module'] );
          						}
-         						foreach( $imod['module'] as $mkey => $mod ) { ?>	
-         				
+         						foreach( $imod['module'] as $mkey => $mod ) { ?>
+
              							<div class="panel panel-default">
              								<div class="panel-heading"><i class="fa fa-wrench"></i> Module: <strong><?php echo $mod->title?></strong></div>
              								<div class="panel-body">
-         									 
-             									<?php 
-             									 $mod = (array)$mod;		 
-             							 		$fields = is_object($mod['field'])?array($mod['field']):$mod['field'];		 
+
+             									<?php
+             									 $mod = (array)$mod;
+             							 		$fields = is_object($mod['field'])?array($mod['field']):$mod['field'];
              									 foreach( $fields as  $f ) { ?>
 
 
              									  <div class="forms-groups">
- 
-													 	<?php 
+
+													 	<?php
 
 													 	if( $f->type=="image") { $rand = rand();
 													 		$image = isset($module[trim($f->name)])?$toolimage->resize( $module[trim($f->name)], 100, 100 ):$placeholder;
@@ -211,7 +184,7 @@
 													                   </div>
 													            </div>
 													 	<?php }else { ?>
-													 	
+
 															<div class="mod-text-lang form-group">
 																 <label class="col-sm-3"><?php echo $f->label; ?></label>
 																 <div class="col-sm-9">
@@ -221,32 +194,32 @@
 																  		<li><a href="#tab-lang-<?php echo $f->name;?><?php echo $language['language_id']; ?>" role="tab" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /></a></li>
 																  	<?php } ?>
 																  	</ul>
-																  <div class="tab-content">	
+																  <div class="tab-content">
 			             										  <?php foreach ($languages as $language) { ?>
 			             											<?php $text = ( isset($module[trim($f->name)][$language['language_id']]) ? trim($module[trim($f->name)][$language['language_id']]) : $f->default );  ?>
 
 			             											<div class="tab-pane" id="tab-lang-<?php echo $f->name;?><?php echo $language['language_id']; ?>">
-				             									 
-				             										   
+
+
 				             										 	<input size="100" value="<?php echo $text; ?>" type="text" name="themecontrol[<?php echo trim($f->name);?>][<?php echo $language['language_id']; ?>]">
 				             										 </div>
-			             										 <?php } ?>	 
+			             										 <?php } ?>
 			             											</div>
 		             										 <?php }elseif( $f->type == 'textarea' ) { ?>
-		             										 		
+
 		             										 	<ul class="nav nav-tabs nav-tablangs">
 															  	<?php foreach ($languages as $language) { ?>
 															  		<li><a href="#tab-lang-<?php echo $f->name;?><?php echo $language['language_id']; ?>" role="tab" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /></a></li>
 															  	<?php } ?>
 															  	</ul>
-																 <div class="tab-content">	  	
+																 <div class="tab-content">
 		             										    <?php foreach ($languages as $language) { ?>
 		             										    	<?php $text = ( isset($module[trim($f->name)][$language['language_id']]) ? trim($module[trim($f->name)][$language['language_id']]) : $f->default );  ?>
 		             										  	 <div class="tab-pane" id="tab-lang-<?php echo $f->name;?><?php echo $language['language_id']; ?>">
-		             										   		 
+
 		             										 		<textarea id="w<?php echo trim($f->name);?>-<?php echo $language['language_id']; ?>"  name="themecontrol[<?php echo trim($f->name);?>][<?php echo $language['language_id']; ?>]"><?php echo $text;?></textarea>
 		             											 </div>
-		             										 	<?php } ?>	 
+		             										 	<?php } ?>
 		             										 	</div>
 																	<script type="text/javascript"><!--
 																	// $("#language-support_data a").tabs();
@@ -260,73 +233,37 @@
 
 		             										 <?php } ?>
 
-		             								
+
 
 															</div>	</div>
-														<?php } ?>	
+														<?php } ?>
 													</div>
 
 
- 
-             									<?php } ?>	
-             					 
+
+             									<?php } ?>
+
              								</div>
              							</div>
-         								 
+
          						<?php } ?>
          						</div>
          					<?php } ?>
          				</div>
-					</div>		
-				</div>	
+					</div>
+				</div>
 				<?php } ?>
-				<div id="tab-font"  class="tab-pane">
-					<?php include( $adminModuleViewDir."tab/font-setting.tpl" ); ?>
-					
-				</div>
+
 	
-				<div id="tab-modules"  class="tab-pane">
-					<?php
-						// if( file_exists($adminModuleViewDir."tab/layout-setting.tpl") ) {
-						 	include( $adminModuleViewDir."tab/layout-setting.tpl" ); 
-						 
-					?>
-				</div>
-				
+
 				
 				
 				<input type="hidden" name="action_type" id="action_type" value="new">
-				<?php if( isset($samples) && $samples )  { ?>
-			
-				<div id="tab-datasample"  class="tab-pane">
-					<?php include( $adminModuleViewDir."tab/datasample.tpl" ); ?>	
-				</div>
-				<?php } ?>
+
 				<div id="tab-compress"  class="tab-pane">
 					<?php include( $adminModuleViewDir.'tab/compress-setting.tpl' ); ?>
 				</div>
-				<div id="tab-customcode"  class="tab-pane">
-					<?php include( $adminModuleViewDir.'tab/customize-setting.tpl' ); ?>
-				</div>
-				
-				<div id="tab-support"  class="tab-pane">
-					<h3>
-						<?php echo $themeinfo['name'];?>
-					</h3>	
-					<hr>
-					<div class="theme-info panel panel-info">
-						<h4 class="panel-heading"><?php echo $olang->get('text_theme_information'); ?></h4>
-						<div class="panel-body">
-							<?php echo $themeinfo['description'];?>
-						</div>
-					</div>	
-					<div class="theme-info panel panel-default">
-						<h4 class="panel-heading"><?php echo $olang->get('text_support_info'); ?></h4>
-						<div class="panel-body">
-						 <?php echo $themeinfo['support'];?>
-						</div>
-					</div>	
-				</div>
+
 	   </div>
     </div></div>
   </div>

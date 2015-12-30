@@ -12,8 +12,7 @@
 				<a class="btn btn-info" title="<?php echo $objlang->get('button_save_edit'); ?>" onclick="$('#save_mode').val('save-edit');$('#form').submit();"><?php echo $objlang->get('button_save_edit'); ?></a>
 				<a class="btn btn-success" title="<?php echo $objlang->get('button_save_new'); ?>" onclick="$('#save_mode').val('save-new');$('#form').submit();"><?php echo $objlang->get('button_save_new'); ?></a> | 
 				<a class="btn btn-warning" title="<?php echo $objlang->get('text_live_edit'); ?>" href="<?php echo $liveedit_url; ?>"><?php echo $objlang->get('text_live_edit'); ?></a>
-				<a class="btn btn-danger" title="<?php echo $button_cancel; ?>" href="<?php echo $cancel; ?>" ><?php echo $button_cancel; ?></a> | 
-				<a class="btn btn-info" title="<?php echo $objlang->get('Guide'); ?>" id="btn-guide" href="http://www.pavothemes.com/guides/pav_megamenu/"><?php echo $objlang->get('Guide');?></a>
+				<a class="btn btn-danger" title="<?php echo $button_cancel; ?>" href="<?php echo $cancel; ?>" ><?php echo $button_cancel; ?></a>
 			</div>
 			<h1><?php echo $heading_title; ?></h1>
 			<ul class="breadcrumb">
@@ -130,7 +129,7 @@
 					<div class="tab-pane active" id="manage-menus">
 						<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
 							<input type="hidden" value="" name="save_mode" id="save_mode"/>
-							<div class="buttons">
+							<div class="buttons hidden">
 								<span class="" style="font-weight:bold;"><?php echo $objlang->get('entry_filter_store');?></span>
 								<select class="form-control" name="stores" id="pavstores" style="width: 20%;">
 									<?php foreach($stores as $store):?>
@@ -144,7 +143,7 @@
 								<input type="hidden" value="<?php echo $store_id;?>" name="verticalmenu[store_id]"/></br></br>
 								<a class="btn btn-primary" title="<?php echo $objlang->get('button_import_categories'); ?>" onclick="$('#save_mode').val('import-categories');$('#form').submit();"><?php echo $objlang->get('button_import_categories'); ?></a>
 								<a class="btn btn-danger" title="<?php echo $objlang->get('button_delete_categories'); ?>" data-toggle="modal" data-target=".deleteTree-modal-sm"><?php echo $objlang->get('button_delete_categories'); ?></a>
-							</div><br/><br/>
+							</div>
 
 							<div class="verticalmenu">
 								<div class="tree-verticalmenu">
@@ -167,7 +166,6 @@
 				</div>
 			</div>
 		</div><!-- end div.panel panel-default -->
-		<div id="info" style="font-size:10px;color:#666"><p>Pav Mega Menu is free to use. it's released under GPL/V2. Powered By <a href="http://www.pavothemes.com">PavoThemes.Com</a></div>
 	</div><!-- container-fluid -->
 </div>
 
