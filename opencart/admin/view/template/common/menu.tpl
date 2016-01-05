@@ -12,6 +12,7 @@
           <li><a href="<?php echo $attribute_group; ?>"><?php echo $text_attribute_group; ?></a></li>
         </ul>
       </li>
+	  <li><a href="<?php echo $deals; ?>"><?php echo $text_deals; ?></a></li>
       <li><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
       <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
     </ul>
@@ -19,7 +20,7 @@
   <li><a href="<?php echo $information; ?>"><i class="fa fa-info fa-fw"></i> <span><?php echo $text_information; ?></span></a></li>
   <li><a href="<?php echo $banner; ?>"><i class="fa fa-image fa-fw"></i> <span><?php echo $text_banner; ?></span></a></li>
   <li><a href="<?php echo $bannerslideshow; ?>"><i class="fa fa-image fa-fw"></i> <span><?php echo $text_bannerslideshow; ?></span></a></li>
-  <li  class="hidden"><a href="<?php echo $news; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_news; ?></span></a></li>
+  <li  class=""><a href="<?php echo $news; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_news; ?></span></a></li>
   <li><a href="<?php echo $pavverticalmenu; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_pavverticalmenu; ?></span></a></li>
   <li><a href="<?php echo $pavmegamenu; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_pavmegamenu; ?></span></a></li>
   <li><a href="<?php echo $footer; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_footer; ?></span></a></li>
@@ -62,7 +63,7 @@
       <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
     </ul>
   </li>
-  <li id="system"  class="hidden"><a class="parent"><i class="fa fa-cog fa-fw"></i> <span><?php echo $text_system; ?></span></a>
+  <li id="system"  class=""><a class="parent"><i class="fa fa-cog fa-fw"></i> <span><?php echo $text_system; ?></span></a>
     <ul>
         <li><a href="<?php echo $interface; ?>"><span><?php echo $text_interface; ?></span></a></li>
       <li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>

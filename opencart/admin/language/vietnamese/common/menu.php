@@ -6,6 +6,7 @@ $_['text_attribute']                   = 'Thuộc Tính';
 $_['text_attribute_group']             = 'Nhóm Thuộc tính';
 $_['text_backup']                      = 'Lưu Trữ / Khôi phục';
 $_['text_banner']                      = 'Quản lý banner';
+$_['text_deals']                      = 'Deal tốt mỗi ngày';
 $_['text_bannerslideshow']             = 'Quản lý slideshow';
 $_['text_interface']                    = 'Quản lý giao diện';
 $_['text_news']                         = 'Quản lý tin tức';
