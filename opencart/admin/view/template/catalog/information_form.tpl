@@ -28,11 +28,11 @@
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
-            <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+            <li  class="hidden"><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
-              <ul class="nav nav-tabs" id="language">
+              <ul class="nav nav-tabs  <?php echo count($languages) > 1? '': 'hidden' ?>" id="language">
                 <?php foreach ($languages as $language) { ?>
                 <li><a href="#language<?php echo $language['language_id']; ?>" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a></li>
                 <?php } ?>
@@ -84,7 +84,7 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-data">
-              <div class="form-group">
+              <div class="form-group hidden">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
                 <div class="col-sm-10">
                   <div class="well well-sm" style="height: 150px; overflow: auto;">
@@ -159,7 +159,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="tab-design">
+            <div class="tab-pane hidden" id="tab-design">
               <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                   <thead>

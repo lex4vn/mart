@@ -6,14 +6,14 @@
       <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
 	  <li><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
       <li><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
-      <li><a class="parent"><?php echo $text_attribute; ?></a>
+      <li class="hidden"><a class="parent"><?php echo $text_attribute; ?></a>
         <ul>
           <li><a href="<?php echo $attribute; ?>"><?php echo $text_attribute; ?></a></li>
           <li><a href="<?php echo $attribute_group; ?>"><?php echo $text_attribute_group; ?></a></li>
         </ul>
       </li>
 	  <li><a href="<?php echo $deals; ?>"><?php echo $text_deals; ?></a></li>
-      <li><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
+      <li class="hidden"><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
       <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
     </ul>
   </li>
@@ -23,8 +23,6 @@
   <li  class=""><a href="<?php echo $news; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_news; ?></span></a></li>
   <li><a href="<?php echo $pavverticalmenu; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_pavverticalmenu; ?></span></a></li>
   <li><a href="<?php echo $pavmegamenu; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_pavmegamenu; ?></span></a></li>
-  <li><a href="<?php echo $footer; ?>"><i class="fa fa-info-circle fa-fw"></i> <span><?php echo $text_footer; ?></span></a></li>
-
 
   <li id="sale"><a href="<?php echo $order; ?>"><i class="fa fa-shopping-cart fa-fw"></i><span><?php echo $text_order; ?></span></a></li>
   <li id="sale1" class="hidden"><a class="parent"><i class="fa fa-shopping-cart fa-fw"></i> <span><?php echo $text_sale; ?></span></a>
@@ -70,12 +68,12 @@
       <li id="design"><a href="<?php echo $layout; ?>"><span><?php echo $text_design; ?></span></a></li>
       <li><a class="parent"><?php echo $text_localisation; ?></a>
         <ul>
-          <li><a href="<?php echo $location; ?>"><?php echo $text_location; ?></a></li>
+		  <li class="hidden"><a href="<?php echo $location; ?>"><?php echo $text_location; ?></a></li>
           <li><a href="<?php echo $language; ?>"><?php echo $text_language; ?></a></li>
           <li><a href="<?php echo $currency; ?>"><?php echo $text_currency; ?></a></li>
           <li><a href="<?php echo $stock_status; ?>"><?php echo $text_stock_status; ?></a></li>
           <li><a href="<?php echo $order_status; ?>"><?php echo $text_order_status; ?></a></li>
-          <li><a class="parent"><?php echo $text_return; ?></a>
+          <li class="hidden"><a class="parent"><?php echo $text_return; ?></a>
             <ul>
               <li><a href="<?php echo $return_status; ?>"><?php echo $text_return_status; ?></a></li>
               <li><a href="<?php echo $return_action; ?>"><?php echo $text_return_action; ?></a></li>
@@ -102,11 +100,10 @@
           <li><a href="<?php echo $error_log; ?>"><?php echo $text_error_log; ?></a></li>
         </ul>
       </li>
-        <li><a class="parent"><span><?php echo $text_extension; ?></span></a>
-            <ul>
+	  <li><a href="<?php echo $module; ?>"><?php echo $text_module; ?></a></li>
                 <li><a href="<?php echo $analytics; ?>"><?php echo $text_analytics; ?></a></li>
                 <li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>
-                <li><a href="<?php echo $module; ?>"><?php echo $text_module; ?></a></li>
+                
                 <li><a href="<?php echo $payment; ?>"><?php echo $text_payment; ?></a></li>
                 <li><a href="<?php echo $shipping; ?>"><?php echo $text_shipping; ?></a></li>
                 <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
@@ -156,7 +153,7 @@
                     </ul>
                 </li>
                 <?php } ?>
-            </ul>
+
         </li>
     </ul>
   </li>

@@ -36,7 +36,7 @@
             <li><a href="#tab-local" data-toggle="tab"><?php echo $tab_local; ?></a></li>
             <li><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
             <li><a href="#tab-image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
-            <li><a href="#tab-ftp" data-toggle="tab"><?php echo $tab_ftp; ?></a></li>
+            <li class="hidden"><a href="#tab-ftp" data-toggle="tab"><?php echo $tab_ftp; ?></a></li>
             <li><a href="#tab-mail" data-toggle="tab"><?php echo $tab_mail; ?></a></li>
             <li><a href="#tab-server" data-toggle="tab"><?php echo $tab_server; ?></a></li>
             <li><a href="#tab-google" data-toggle="tab"><?php echo $tab_google; ?></a></li>
@@ -1187,7 +1187,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="tab-ftp">
+            <div class="tab-pane hidden" id="tab-ftp">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-ftp-host"><?php echo $entry_ftp_hostname; ?></label>
                 <div class="col-sm-10">
