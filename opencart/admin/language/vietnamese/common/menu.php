@@ -104,3 +104,5 @@ $_['text_paypal_search']               = 'Giao dịch PayPal Ex';
 $_['text_pavverticalmenu']             = 'Quản lý menu trái';
 $_['text_pavmegamenu']                 = 'Quản lý menu chính';
 $_['text_footer']                 = 'Quản lý footer';
+$_['text_chat']                 = 'Chat online';
+$_['text_analytics']                 = 'Google analytics';

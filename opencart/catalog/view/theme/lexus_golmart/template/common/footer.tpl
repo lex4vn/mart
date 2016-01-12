@@ -68,7 +68,6 @@
 
 </footer>
  
- 
 <div id="powered">
   <div class="container">
     <div class="inside">
@@ -115,7 +114,7 @@
 
 	</ul>
 </nav>
-
+<?php echo $config_chat_online; ?>
 </body></html>
 
 
