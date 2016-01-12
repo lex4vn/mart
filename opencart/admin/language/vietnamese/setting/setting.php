@@ -7,6 +7,7 @@ $_['text_success']             = 'Thành công: Thiết lập của bạn đã �
 $_['text_items']               = 'Số lượng Sản phẩm hiển thị:';
 $_['text_product']             = 'Quản lý Hiển thị:';
 $_['text_edit']                        = 'Cập nhật Thiết lập chung';
+$_['text_edit_chat']                        = 'Cập nhật chat online';
 $_['text_voucher']             = 'Phiếu Quà tặng - Vouchers';
 $_['text_image_manager']       = 'Quản lý hình ảnh';
 $_['text_browse']              = 'Duyệt file';
@@ -24,6 +25,7 @@ $_['text_affiliate']               = 'Liên kết - Affiliates';
 $_['text_return']                  = 'Đổi / Trả hàng';
 $_['text_google_analytics']            = 'Google Analytics';
 $_['text_google_captcha']              = 'Google reCAPTCHA';
+$_['chat_online']              = 'Chat online';
 
 // Entry
 $_['entry_name']                   = 'Tên Shop:';
@@ -150,6 +152,7 @@ $_['entry_file_ext_allowed']           = 'Định dạng đuôi file được ph
 $_['entry_google_captcha_public']      = 'Site key';
 $_['entry_google_captcha_secret']      = 'Secret key';
 $_['entry_status']                     = 'Trạng thái';
+$_['entry_chat_online']                     = 'Hỗ trợ bằng <br />Chat Online';
 
 
 // Help
@@ -218,6 +221,7 @@ $_['help_encryption']                  = 'Cung cấp khóa mã hóa sẽ đượ
 $_['help_compression']                 = 'Bật chế độ nén sẽ giúp cho Website tải xuống nhanh hơn, thông thường mức nén từ 0 - 9. Khuyến cáo nên đặt trong khoảng từ 4 đến 6';
 $_['help_google_analytics']            = 'Đăng nhập Tài khoản <a onclick="window.open(\'http://www.google.com/analytics/\');"><u>Google Analytics</u></a> của bạn. Sau đó thêm Website vào Google Analytics & Copy mã theo dõi phân tích tình hình Website vào ô này.';
 $_['help_google_captcha']              = 'Truy cập Trang <a href="https://www.google.com/recaptcha/intro/index.html" target="_blank"><u>Google reCAPTCHA page</u></a> và đăng ký Tài khoản để lấy thông tin cho WebSite của bạn.';
+$_['help_chat_online']              = 'Nhúng mã chat online, ví dụ: Subiz,';
 
 // Error
 $_['error_warning']             = 'Cảnh báo: Dữ liệu bắt buộc chưa được nhập vào. Kiểm tra các ô trống!';

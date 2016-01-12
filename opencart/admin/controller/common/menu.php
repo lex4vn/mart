@@ -115,6 +115,7 @@ class ControllerCommonMenu extends Controller {
 		$data['text_pavverticalmenu'] = $this->language->get('text_pavverticalmenu');
 		$data['text_pavmegamenu'] = $this->language->get('text_pavmegamenu');
 		$data['text_footer'] = $this->language->get('text_footer');
+		$data['text_chat'] = $this->language->get('text_chat');
 
         $data['footer'] = $this->url->link('module/footer', 'token=' . $this->session->data['token'], 'SSL');
         $data['pavmegamenu'] = $this->url->link('module/pavmegamenu', 'token=' . $this->session->data['token'], 'SSL');
@@ -184,6 +185,7 @@ class ControllerCommonMenu extends Controller {
 		$data['return_status'] = $this->url->link('localisation/return_status', 'token=' . $this->session->data['token'], 'SSL');
 		$data['shipping'] = $this->url->link('extension/shipping', 'token=' . $this->session->data['token'], 'SSL');
 		$data['setting'] = $this->url->link('setting/setting', 'token=' . $this->session->data['token'], 'SSL');
+		$data['chat'] = $this->url->link('setting/chat', 'token=' . $this->session->data['token'], 'SSL');
 		$data['stock_status'] = $this->url->link('localisation/stock_status', 'token=' . $this->session->data['token'], 'SSL');
 		$data['tax_class'] = $this->url->link('localisation/tax_class', 'token=' . $this->session->data['token'], 'SSL');
 		$data['tax_rate'] = $this->url->link('localisation/tax_rate', 'token=' . $this->session->data['token'], 'SSL');
