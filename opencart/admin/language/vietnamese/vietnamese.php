@@ -58,6 +58,7 @@ $_['button_add_voucher']      = 'Thêm Voucher';
 $_['button_approve']          = 'Chấp thuận';
 $_['button_back']             = 'Đổi / Trả lại';
 $_['button_backup']           = 'Sao lưu';
+$_['button_banner_add']           = 'Thêm banner';
 $_['button_cancel']           = 'Hủy';
 $_['button_cart']             = 'Thêm vào giỏ';
 $_['button_checkout']         = 'Thanh toán';
