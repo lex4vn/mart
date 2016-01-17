@@ -72,6 +72,8 @@
             <li><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
         </ul>
     </li>
+    <li><a href="<?php echo $pavnewsletter; ?>"><i class="fa fa-envelope fa-fw"></i>
+            <span><?php echo $text_pavnewsletter; ?></span></a></li>
     <li id="system" class=""><a class="parent"><i class="fa fa-cog fa-fw"></i> <span><?php echo $text_system; ?></span></a>
         <ul>
             <li><a href="<?php echo $interface; ?>"><span><?php echo $text_interface; ?></span></a></li>

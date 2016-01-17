@@ -106,4 +106,5 @@ $_['text_pavmegamenu']                 = 'Quản lý menu chính';
 $_['text_footer']                 = 'Quản lý footer';
 $_['text_chat']                 = 'Chat online';
 $_['text_home']                 = 'Quản lý trang chủ';
+$_['text_pavnewsletter']                 = 'Quản lý Gửi thư';
 $_['text_analytics']                 = 'Google analytics';
