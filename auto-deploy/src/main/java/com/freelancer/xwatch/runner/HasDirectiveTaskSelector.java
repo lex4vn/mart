@@ -8,16 +8,15 @@ import com.freelancer.xwatch.utils.*;
 import com.google.common.base.*;
 import com.google.common.collect.*;
 
-public class HasDirectiveFeatureSelector implements IFeatureSelector {
+public class HasDirectiveTaskSelector implements ITaskSelector {
     private String[] args;
-    private Map<String, String> directives = Maps.newHashMap(); // <PackageDirective,
-                                                                // PackageFullName>
+    private Map<String, String> directives = Maps.newHashMap();
 
     /**
      * @param args The first argument is Package Directive, e.g. "FileSystem" mapped to
      *        "com.freelancer.xwatch.io" The second argument is the Feature Name, e.g. "Archive".
      */
-    public HasDirectiveFeatureSelector(String[] args) {
+    public HasDirectiveTaskSelector(String[] args) {
         FDLogger.debug("args = " + args == null ? "" : StringUtils.join(args));
         Preconditions.checkNotNull(args, "args cannot be null");
         Preconditions.checkArgument(args.length >= 2, "Package directive and Feature name are required.");
@@ -26,13 +25,13 @@ public class HasDirectiveFeatureSelector implements IFeatureSelector {
     }
 
     @Override
-    public IFeature getExecutingFeature() throws Exception {
+    public ITask getExecutingFeature() throws Exception {
         String packageName = this.resolvePackageDirective(this.args[0]);
         String className = String.format("%s.%s", packageName, this.args[1]);
 
         FDLogger.debug("Loading class, className = " + className);
         Class<?> clazz = Class.forName(className);
-        return (IFeature) clazz.newInstance();
+        return (ITask) clazz.newInstance();
     }
 
     /**

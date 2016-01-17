@@ -1,6 +1,6 @@
 package com.freelancer.xwatch.runner;
 
-public interface IFeatureSelector {
+public interface ITaskSelector {
 
     /**
      * @return the arguments to be used in the feature after excluding directives.
@@ -11,6 +11,6 @@ public interface IFeatureSelector {
      * @return the Feature to be executed.
      * @throws Exception
      */
-    public IFeature getExecutingFeature() throws Exception;
+    public ITask getExecutingFeature() throws Exception;
 
 }

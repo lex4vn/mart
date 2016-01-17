@@ -14,6 +14,8 @@ public final class Constants {
     public static final String UNDERLINE = "_";
     public static final String DOT = ".";
     public static final String SUFFIX_GIT = ".git";
+    public static final String SUFFIX_PHP = ".php";
+    public static final String SUFFIX_SQL = ".sql";
     public static final String SUFFIX_TXT = ".txt";
     public static final String SUFFIX_XML = ".xml";
     public static final String BLANK = "";

@@ -10,11 +10,10 @@ import com.freelancer.xwatch.utils.files.*;
 public class SQLRunner {
 
     private final Connection conn;
+    private final Statement stmt;
     private boolean stopOnError = false;
     private boolean executeFullScript = false;
     private String scriptDelimiter = ";";
-
-    Statement stmt = null;
 
     public SQLRunner(Connection conn) throws SQLException {
         this.conn = conn;

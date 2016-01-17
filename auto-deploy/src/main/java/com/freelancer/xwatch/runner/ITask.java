@@ -1,6 +1,6 @@
 package com.freelancer.xwatch.runner;
 
-public interface IFeature {
+public interface ITask {
 
     void initialize();
 

@@ -8,13 +8,13 @@ import com.freelancer.xwatch.utils.*;
 
 public class CommandLineParser {
 
-    private String[] remainingArgs = null;
-    private Map<String, Option<?>> options = new HashMap<String, Option<?>>(10);
-    private Map<String, List<?>> values = new HashMap<String, List<?>>(10);
-    List<String> optionHelpStringsRequired = new ArrayList<String>();
-    List<String> optionHelpStringsOptional = new ArrayList<String>();
-    String examples;
-    String description;
+    private String[] remainingArgs;
+    private final Map<String, Option<?>> options = new HashMap<String, Option<?>>(10);
+    private final Map<String, List<?>> values = new HashMap<String, List<?>>(10);
+    private final List<String> optionHelpStringsRequired = new ArrayList<String>();
+    private final List<String> optionHelpStringsOptional = new ArrayList<String>();
+    private String examples;
+    private String description;
 
     /**
      * Add the specified Option to the list of accepted options
@@ -217,9 +217,8 @@ public class CommandLineParser {
      */
     public final void parse(String[] argv, Locale locale) throws OptionException {
 
-        ArrayList<Object> otherArgs = new ArrayList<Object>();
+        List<Object> otherArgs = new ArrayList<Object>();
         int position = 0;
-        this.values = new HashMap<String, List<?>>(10);
         while (position < argv.length) {
             String curArg = argv[position];
             if (curArg.startsWith("-")) {

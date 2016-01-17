@@ -3,21 +3,21 @@ package com.freelancer.xwatch.runner;
 import com.freelancer.xwatch.cli.*;
 import com.freelancer.xwatch.utils.*;
 
-public class FeatureRunner {
-    private final IFeatureSelector featureSelector;
+public class TaskRunner {
+    private final ITaskSelector taskSelector;
 
-    public FeatureRunner(IFeatureSelector featureSelector) {
-        this.featureSelector = featureSelector;
+    public TaskRunner(ITaskSelector featureSelector) {
+        this.taskSelector = featureSelector;
     }
 
     public int run() {
         int errorCode = ErrorCodes.OK;
 
-        IFeature feature = null;
+        ITask feature = null;
         try {
-            feature = this.featureSelector.getExecutingFeature();
+            feature = this.taskSelector.getExecutingFeature();
             feature.initialize();
-            errorCode = feature.run(this.featureSelector.getFeatureArguments());
+            errorCode = feature.run(this.taskSelector.getFeatureArguments());
 
         } catch (OptionException e) {
             FDLogger.error(e.getMessage(), e);

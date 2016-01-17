@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 
 import com.freelancer.xwatch.cli.*;
 import com.freelancer.xwatch.crypto.*;
+import com.freelancer.xwatch.i18n.*;
 import com.freelancer.xwatch.runner.*;
 import com.freelancer.xwatch.utils.*;
 import com.freelancer.xwatch.utils.files.*;
@@ -15,7 +16,7 @@ import com.freelancer.xwatch.utils.files.*;
 /**
  *
  */
-public class SQLFeature extends AbstractFeature {
+public final class SQLTask extends AbstractTask {
 
     private Option<String> userArg;
     private Option<String> passArg;
@@ -32,7 +33,7 @@ public class SQLFeature extends AbstractFeature {
     private Option<String> tnsNamesORAFileNameArg;
     private Option<String> sqlPasswordArg;
 
-    Connection connection = null;
+    private Connection connection;
     private int connectionInterval = 10;
     private int nConnRetries = 5;
     // Number of results returned by the execution
@@ -41,84 +42,47 @@ public class SQLFeature extends AbstractFeature {
     public void initialize() {
         super.initialize();
 
-        this.userArg = this.parser.addHelp(this.parser.addStringOption("usr", "user", true), "The database user name");
+        this.userArg =
+            this.parser.addHelp(this.parser.addStringOption("usr", "user", true), FDInfoMessage.DATABASE_USER);
 
         this.passArg =
-            this.parser.addHelp(this.parser.addStringOption("pwd", "password", true), "The database password");
+            this.parser.addHelp(this.parser.addStringOption("pwd", "password", true), FDInfoMessage.DATABASE_PASSWORD);
 
         this.jdbcConnStrArg =
-            this.parser.addHelp(this.parser.addStringOption("jdbc_conn", "jdbcUrl", true), "JDBC connection string. E.g.: jdbc:sqlserver://myServer:1433;databaseName=myDB");
+            this.parser.addHelp(this.parser.addStringOption("jdbc_conn", "jdbcUrl", true), FDInfoMessage.JDBC_CONNECTION_STRING);
 
         this.jdbcDriverFileArg =
-            this.parser.addHelp(this.parser.addStringOption("jar", "jdbcDriver", true), "URI pointing to the vendor-specific JDBC jar-file. E.g 'file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar'");
+            this.parser.addHelp(this.parser.addStringOption("jar", "jdbcDriver", true), FDInfoMessage.JDBC_DRIVER);
 
         this.jdbcDriverClassArg =
-            this.parser.addHelp(this.parser.addStringOption("class", "jdbcClass", true), "Name of the class to load when initializing the JDBC connection. E.g 'com.microsoft.sqlserver.jdbc.SQLServerDriver'");
+            this.parser.addHelp(this.parser.addStringOption("class", "jdbcClass", true), FDInfoMessage.JDBC_CLASS);
 
         this.loginTimeoutArg =
-            this.parser.addHelp(this.parser.addIntegerOption("t", "timeout", false), "Time interval in seconds during which JDBCTOOL.jar tries to establish a connection to the database.");
+            this.parser.addHelp(this.parser.addIntegerOption("t", "timeout", false), FDInfoMessage.TIME_OUT);
 
         this.connRetriesArg =
-            this.parser.addHelp(this.parser.addIntegerOption("n", "retry", false), "The number of connection attempts before aborting");
+            this.parser.addHelp(this.parser.addIntegerOption("n", "retry", false), FDInfoMessage.RETRY_CONNECTION);
 
         this.propArg =
-            this.parser.addHelp(this.parser.addStringOption("prop", "addProp", false), "Additional property=value pairs used when connecting via JDBC");
+            this.parser.addHelp(this.parser.addStringOption("prop", "addProp", false), FDInfoMessage.ADDITIONAL_PROPS);
 
         this.tnsNamesORAFileNameArg =
-            this.parser.addHelp(this.parser.addStringOption("tns", "tnsName", false), "Points to the tnsnames.ora file (if available). Parameter has only effect, when type = 'ORACLE-THIN'/'ORACLE-OCI' and parameter -usetns is used at the command line. Connection method to Oracle databases using the tnsnames.ora.");
+            this.parser.addHelp(this.parser.addStringOption("tns", "tnsName", false), FDInfoMessage.ORACLE_ORA);
 
         this.scriptFileArg =
-            this.parser.addHelp(this.parser.addStringOption("script", "scriptFile", false), "The script file will be executed");
+            this.parser.addHelp(this.parser.addStringOption("script", "scriptFile", false), FDInfoMessage.SQL_FILE);
 
         this.queryArg =
-            this.parser.addHelp(this.parser.addStringOption("query", "querySQL", false), "SQL-query to execute (e.g. 'SELECT * FROM myTable')");
+            this.parser.addHelp(this.parser.addStringOption("query", "querySQL", false), FDInfoMessage.SQL_QUERY);
 
         this.scriptSeperatorArg =
-            this.parser.addHelp(this.parser.addStringOption("sep", "scriptSeperator", false), "If you execute a script containing multiple queries/statements, JDBCTOOL executes them statement-by-statement. The statements in the scripts are usually separated by ';' or similar. For MSSQL usually 'GO' is used.");
+            this.parser.addHelp(this.parser.addStringOption("sep", "scriptSeperator", false), FDInfoMessage.SQL_SEPARATOR);
 
         this.outputSeperatorArg =
-            this.parser.addHelp(this.parser.addStringOption("out", "outputSeperator", false), "If a query returns multiple values, this parameter defines which string should be used to separate the columns of a returned results.");
+            this.parser.addHelp(this.parser.addStringOption("out", "outputSeperator", false), FDInfoMessage.OUTPUT_SEPARATOR);
 
         this.sqlPasswordArg =
-            this.parser.addHelp(this.parser.addStringOption("sqlpwd", "sqlPassword", false), "The password which will be used directly in SQL statement");
-    }
-
-    public void printResult(SQLResult result, String outputSeperator) {
-        int i = 0;
-        FDLogger.info("Processing Resultset ...");
-        for (Row row : result.getTable().getRowList()) {
-            StringBuffer sb = new StringBuffer();
-            sb.append(++i).append(outputSeperator);
-            for (Column<String, String> col : row.getColumn()) {
-                sb.append(col.getKey()).append('=').append(col.getValue()).append(outputSeperator);
-            }
-            String str = sb.toString();
-            str = str.substring(0, str.length() - outputSeperator.length());
-            FDLogger.info(str);
-        }
-        if (result.getUpdateCount() > 0) {
-            FDLogger.info("Processing affected rows ...");
-            FDLogger.info(String.format("%d rows updated", result.getUpdateCount()));
-            i += result.getUpdateCount();
-        }
-        FDLogger.info("Affected Rows: " + i);
-        FDLogger.info("done.");
-    }
-
-    public File replaceScriptVariable(String variable, String value, String scriptFile) throws URISyntaxException {
-        File temp;
-        try {
-            temp = File.createTempFile("SQLScript" + System.currentTimeMillis(), ".sql");
-            temp.deleteOnExit();
-
-            String tempSqlContent = FileUtils.readFileToString(FileUtility.fileFromUri(new URI(scriptFile)));
-            String sqlContent = tempSqlContent.replaceAll(variable, value);
-            FileUtils.writeStringToFile(temp, sqlContent);
-        } catch (IOException e) {
-            FDLogger.LOG.warn("Cannot replace SQLPassword in file URI: " + scriptFile, e);
-            temp = FileUtility.fileFromUri(new URI(scriptFile));
-        }
-        return temp;
+            this.parser.addHelp(this.parser.addStringOption("sqlpwd", "sqlPassword", false), FDInfoMessage.DIRECTLY_SQL_PWD);
     }
 
     @Override
@@ -238,6 +202,11 @@ public class SQLFeature extends AbstractFeature {
             scriptSeperator = ";";
         }
         // execute
+        return execute(returnCode, sqlPassword, scriptFile, scriptSeperator);
+    }
+
+    private int execute(int returnCode, String sqlPassword, String scriptFile, String scriptSeperator) throws Exception,
+        SQLException {
         SQLRunner sqlRunner = null;
         try {
             FDLogger.info("Executing SQL query/script ...");
@@ -291,4 +260,27 @@ public class SQLFeature extends AbstractFeature {
         }
         return FDLogger.LOG.exit(returnCode);
     }
+
+    private void printResult(SQLResult result, String outputSeperator) {
+        int i = 0;
+        FDLogger.info("Processing Resultset ...");
+        for (Row row : result.getTable().getRowList()) {
+            StringBuffer sb = new StringBuffer();
+            sb.append(++i).append(outputSeperator);
+            for (Column<String, String> col : row.getColumn()) {
+                sb.append(col.getKey()).append('=').append(col.getValue()).append(outputSeperator);
+            }
+            String str = sb.toString();
+            str = str.substring(0, str.length() - outputSeperator.length());
+            FDLogger.info(str);
+        }
+        if (result.getUpdateCount() > 0) {
+            FDLogger.info("Processing affected rows ...");
+            FDLogger.info(String.format("%d rows updated", result.getUpdateCount()));
+            i += result.getUpdateCount();
+        }
+        FDLogger.info("Affected Rows: " + i);
+        FDLogger.info("done.");
+    }
+
 }

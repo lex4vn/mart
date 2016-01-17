@@ -3,7 +3,7 @@ package com.freelancer.xwatch.runner;
 import com.freelancer.xwatch.cli.*;
 import com.freelancer.xwatch.utils.*;
 
-public abstract class AbstractFeature implements IFeature {
+public abstract class AbstractTask implements ITask {
 
     protected final CommandLineParser parser = new CommandLineParser();
     protected Option<String> logLevelArg;
