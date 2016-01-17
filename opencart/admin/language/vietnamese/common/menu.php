@@ -107,4 +107,5 @@ $_['text_footer']                 = 'Quản lý footer';
 $_['text_chat']                 = 'Chat online';
 $_['text_home']                 = 'Quản lý trang chủ';
 $_['text_pavnewsletter']                 = 'Quản lý Gửi thư';
+$_['text_pavreassurance']                 = 'Thông tin bảo đảm';
 $_['text_analytics']                 = 'Google analytics';

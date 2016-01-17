@@ -118,6 +118,7 @@ class ControllerCommonMenu extends Controller {
 		$data['text_chat'] = $this->language->get('text_chat');
 		$data['text_home'] = $this->language->get('text_home');
 		$data['text_pavnewsletter'] = $this->language->get('text_pavnewsletter');
+		$data['text_pavreassurance'] = $this->language->get('text_pavreassurance');
 
         $data['footer'] = $this->url->link('module/footer', 'token=' . $this->session->data['token'], 'SSL');
         $data['pavmegamenu'] = $this->url->link('module/pavmegamenu', 'token=' . $this->session->data['token'], 'SSL');
@@ -160,6 +161,7 @@ class ControllerCommonMenu extends Controller {
 		$data['module'] = $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL');
 		$data['module_home'] = $this->url->link('module/pavhomebuilder', 'token=' . $this->session->data['token'], 'SSL');
 		$data['pavnewsletter'] = $this->url->link('module/pavnewsletter', 'token=' . $this->session->data['token'], 'SSL');
+		$data['pavreassurance'] = $this->url->link('module/pavreassurance', 'token=' . $this->session->data['token'], 'SSL');
 		$data['deals'] = $this->url->link('module/pavdeals', 'token=' . $this->session->data['token'], 'SSL');
 		$data['option'] = $this->url->link('catalog/option', 'token=' . $this->session->data['token'], 'SSL');
 		$data['order'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');

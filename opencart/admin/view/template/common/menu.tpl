@@ -77,6 +77,7 @@
     <li id="system" class=""><a class="parent"><i class="fa fa-cog fa-fw"></i> <span><?php echo $text_system; ?></span></a>
         <ul>
             <li><a href="<?php echo $interface; ?>"><span><?php echo $text_interface; ?></span></a></li>
+            <li><a href="<?php echo $pavreassurance; ?>"><span><?php echo $text_pavreassurance; ?></span></a></li>
             <li><a href="<?php echo $setting; ?>"><?php echo $text_setting; ?></a></li>
             <li><a href="<?php echo $chat; ?>"><span><?php echo $text_chat; ?></span></a></li>
             <li><a href="<?php echo $layout; ?>"><span><?php echo $text_design; ?></span></a></li>
