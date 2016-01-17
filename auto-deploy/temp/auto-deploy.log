@@ -1,0 +1,92 @@
+2016-01-17 10:27:05.208 [main] INFO  c.f.x.u.FDLogger - Package: xwatch. Version: 0.0.1-SNAPSHOT.
+2016-01-17 10:27:05.402 [main] DEBUG c.f.x.u.FDLogger - databaseSQLFeature
+2016-01-17 10:27:05.422 [main] DEBUG c.f.x.u.FDLogger - Loading class, className = com.freelancer.xwatch.database.SQLFeature
+2016-01-17 10:27:05.446 [main] INFO  c.f.x.u.FDLogger - STARTED: com.freelancer.xwatch.database.SQLFeature
+2016-01-17 10:27:05.449 [main] DEBUG c.f.x.u.FDLogger - Print input parameters:
+2016-01-17 10:27:05.451 [main] DEBUG c.f.x.u.FDLogger - outputSeperator = 
+2016-01-17 10:27:05.453 [main] DEBUG c.f.x.u.FDLogger - tnsName = 
+2016-01-17 10:27:05.454 [main] DEBUG c.f.x.u.FDLogger - sqlPassword = 
+2016-01-17 10:27:05.456 [main] DEBUG c.f.x.u.FDLogger - jdbcClass = 
+2016-01-17 10:27:05.458 [main] DEBUG c.f.x.u.FDLogger - jdbcDriver = 
+2016-01-17 10:27:05.460 [main] DEBUG c.f.x.u.FDLogger - querySQL = 
+2016-01-17 10:27:05.461 [main] DEBUG c.f.x.u.FDLogger - scriptSeperator = 
+2016-01-17 10:27:05.464 [main] DEBUG c.f.x.u.FDLogger - password = 
+2016-01-17 10:27:05.465 [main] DEBUG c.f.x.u.FDLogger - addProp = 
+2016-01-17 10:27:05.466 [main] DEBUG c.f.x.u.FDLogger - user = 
+2016-01-17 10:27:05.468 [main] DEBUG c.f.x.u.FDLogger - timeout = 
+2016-01-17 10:27:05.470 [main] DEBUG c.f.x.u.FDLogger - retry = 
+2016-01-17 10:27:05.472 [main] DEBUG c.f.x.u.FDLogger - loglevel = 
+2016-01-17 10:27:05.475 [main] DEBUG c.f.x.u.FDLogger - scriptFile = 
+2016-01-17 10:27:05.476 [main] DEBUG c.f.x.u.FDLogger - jdbcUrl = 
+2016-01-17 10:27:05.482 [main] WARN  c.f.x.u.FDLogger - Custom log level: null
+2016-01-17 10:27:05.485 [main] ERROR c.f.x.u.FDLogger - Failed to set custom log level: null.
+java.lang.NullPointerException
+	at java.util.concurrent.ConcurrentHashMap.hash(Unknown Source) ~[?:1.7.0_79]
+	at java.util.concurrent.ConcurrentHashMap.get(Unknown Source) ~[?:1.7.0_79]
+	at org.apache.logging.log4j.Level.getLevel(Level.java:249) ~[auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.utils.LogUtils.configureLogLevel(LogUtils.java:65) [auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.runner.AbstractFeature.run(AbstractFeature.java:27) [auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.database.SQLFeature.run(SQLFeature.java:126) [auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.runner.FeatureRunner.run(FeatureRunner.java:20) [auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.Main.main(Main.java:17) [auto-deploy.jar:0.0.1-SNAPSHOT]
+2016-01-17 10:27:05.555 [main] ERROR c.f.x.u.FDLogger - Missing required option '-usr, --user'
+com.freelancer.xwatch.cli.OptionException$MissingRequiredOptionException: Missing required option '-usr, --user'
+	at com.freelancer.xwatch.cli.CommandLineParser.getOptionValue(CommandLineParser.java:157) ~[auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.cli.CommandLineParser.getOptionValue(CommandLineParser.java:144) ~[auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.database.SQLFeature.run(SQLFeature.java:130) ~[auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.runner.FeatureRunner.run(FeatureRunner.java:20) [auto-deploy.jar:0.0.1-SNAPSHOT]
+	at com.freelancer.xwatch.Main.main(Main.java:17) [auto-deploy.jar:0.0.1-SNAPSHOT]
+2016-01-17 10:27:05.591 [main] INFO  c.f.x.u.FDLogger - 
+USAGE: java -jar auto-deploy.jar database SQLFeature [arguments]
+2016-01-17 10:27:05.595 [main] INFO  c.f.x.u.FDLogger - 
+REQUIRED ARGUMENTS:
+
+2016-01-17 10:27:05.598 [main] INFO  c.f.x.u.FDLogger - 	-usr, --user
+		The database user name
+
+2016-01-17 10:27:05.609 [main] INFO  c.f.x.u.FDLogger - 	-pwd, --password
+		The database password
+
+2016-01-17 10:27:05.614 [main] INFO  c.f.x.u.FDLogger - 	-jdbc_conn, --jdbcUrl
+		JDBC connection string. E.g.: jdbc:sqlserver://myServer:1433;databaseName=myDB
+
+2016-01-17 10:27:05.621 [main] INFO  c.f.x.u.FDLogger - 	-jar, --jdbcDriver
+		URI pointing to the vendor-specific JDBC jar-file. E.g 'file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar'
+
+2016-01-17 10:27:05.632 [main] INFO  c.f.x.u.FDLogger - 	-class, --jdbcClass
+		Name of the class to load when initializing the JDBC connection. E.g 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
+
+2016-01-17 10:27:05.642 [main] INFO  c.f.x.u.FDLogger - 
+OPTIONAL ARGUMENTS:
+
+2016-01-17 10:27:05.645 [main] INFO  c.f.x.u.FDLogger - 	-ll, --loglevel
+		The custom log level to be used (OFF, TRACE, DEBUG, INFO, WARN, ERROR, FATAL).
+
+2016-01-17 10:27:05.652 [main] INFO  c.f.x.u.FDLogger - 	-t, --timeout
+		Time interval in seconds during which JDBCTOOL.jar tries to establish a connection to the database.
+
+2016-01-17 10:27:05.663 [main] INFO  c.f.x.u.FDLogger - 	-n, --retry
+		The number of connection attempts before aborting
+
+2016-01-17 10:27:05.670 [main] INFO  c.f.x.u.FDLogger - 	-prop, --addProp
+		Additional property=value pairs used when connecting via JDBC
+
+2016-01-17 10:27:05.675 [main] INFO  c.f.x.u.FDLogger - 	-tns, --tnsName
+		Points to the tnsnames.ora file (if available). Parameter has only effect, when type = 'ORACLE-THIN'/'ORACLE-OCI' and parameter -usetns is used at the command line. Connection method to Oracle databases using the tnsnames.ora.
+
+2016-01-17 10:27:05.700 [main] INFO  c.f.x.u.FDLogger - 	-script, --scriptFile
+		The script file will be executed
+
+2016-01-17 10:27:05.711 [main] INFO  c.f.x.u.FDLogger - 	-query, --querySQL
+		SQL-query to execute (e.g. 'SELECT * FROM myTable')
+
+2016-01-17 10:27:05.721 [main] INFO  c.f.x.u.FDLogger - 	-sep, --scriptSeperator
+		If you execute a script containing multiple queries/statements, JDBCTOOL executes them statement-by-statement. The statements in the scripts are usually separated by ';' or similar. For MSSQL usually 'GO' is used.
+
+2016-01-17 10:27:05.735 [main] INFO  c.f.x.u.FDLogger - 	-out, --outputSeperator
+		If a query returns multiple values, this parameter defines which string should be used to separate the columns of a returned results.
+
+2016-01-17 10:27:05.747 [main] INFO  c.f.x.u.FDLogger - 	-sqlpwd, --sqlPassword
+		The password which will be used directly in SQL statement
+
+2016-01-17 10:27:05.756 [main] INFO  c.f.x.u.FDLogger - ENDED: com.freelancer.xwatch.database.SQLFeature
