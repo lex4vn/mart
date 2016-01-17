@@ -30,7 +30,8 @@
             <span><?php echo $text_pavverticalmenu; ?></span></a></li>
     <li><a href="<?php echo $pavmegamenu; ?>"><i class="fa fa-info-circle fa-fw"></i>
             <span><?php echo $text_pavmegamenu; ?></span></a></li>
-
+    <li><a href="<?php echo $module_home; ?>"><i class="fa fa-info-circle fa-fw"></i>
+            <span><?php echo $text_home; ?></span></a></li>
     <li id="sale"><a href="<?php echo $order; ?>"><i
                     class="fa fa-shopping-cart fa-fw"></i><span><?php echo $text_order; ?></span></a></li>
     <li id="sale1" class="hidden"><a class="parent"><i class="fa fa-shopping-cart fa-fw"></i>

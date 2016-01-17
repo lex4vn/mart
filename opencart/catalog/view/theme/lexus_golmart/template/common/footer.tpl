@@ -114,7 +114,7 @@
 
 	</ul>
 </nav>
-<?php echo $config_chat_online; ?>
+<?php echo html_entity_decode($config_chat_online); ?>
 </body></html>
 
 

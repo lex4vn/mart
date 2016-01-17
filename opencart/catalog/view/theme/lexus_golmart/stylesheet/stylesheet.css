@@ -8650,6 +8650,9 @@ body .owl-carousel {
   color: #bbb;
   font-weight: bold;
 }
+#button-book{
+    color: #fff;
+}
 .product-info .product-meta a .fa {
   padding-right: 5px;
 }
