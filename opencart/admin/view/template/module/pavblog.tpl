@@ -1,7 +1,5 @@
 <?php echo $header; 
-
 	$module_row=0; 
-
 ?>
 <script type="text/javascript" src="view/javascript/ckeditor/ckeditor.js"></script> 
 <div id="content">
@@ -25,8 +23,6 @@
     <div class="content">
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
 			<div class="megamenu">
-			
-			
 				<div class="tree-megamenu">
 					<h4>Tree Megamenu</h4>
 					<?php echo $tree; ?>

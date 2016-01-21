@@ -8,10 +8,10 @@
 *******************************************************/
 
 // Heading
-$_['heading_title'] = 'Pav Blog Management';
+$_['heading_title'] = 'Quản lý bài viết';
 
 // Text
-$_['text_treemenu'] = 'Quản lý cây category';
+$_['text_treemenu'] = 'Quản lý cây danh mục';
  $_['text_menu_assignment'] = 'Phân công module';
 $_['text_module']         = 'Modules';
 $_['text_success']        = 'Chúc mừng: Bạn vừa cập nhật thành công module Category!';
@@ -41,14 +41,14 @@ $_['text_keyword_listing_blogs_page'] = 'Key Word - Listing Blog Page<p><i>Keywo
 
 $_['text_image_manager']   = 'Quản lý ảnh';
 $_['text_front_page'] = 'Trang phía trước';
-$_['text_category_page'] = 'Trang category';
+$_['text_category_page'] = 'Trang danh mục';
 $_['text_item_page'] = 'Trang item';
-$_['text_filter_blog'] = 'Bộ lọc Blogs';
+$_['text_filter_blog'] = 'Bộ lọc bài viết';
 $_['text_normal'] = 'Bình thường';
 $_['text_seo'] = 'SEO';
 $_['text_guide_urls'] = 'Hướng dẫn';
 $_['text_guide_seo'] = 'Hướng dẫn kích hoạt SEO';
-$_['text_guide_category'] = 'Quản lý Category';
+$_['text_guide_category'] = 'Quản lý danh mục';
 $_['text_guide_blog'] = 'Quản lý Blog';
 $_['text_guide_module_setting'] = 'Cài đặt module';
 // Entry
@@ -61,7 +61,7 @@ $_['entry_sort_order']    = 'Thứ tự sắp xếp:';
 $_['entry_description']    = 'Mô tả:';
 $_['entry_type']    = 'Type:';
 $_['entry_url']    = 'URL:';
-$_['entry_category']    = 'Category:';
+$_['entry_category']    = 'Danh mục:';
 $_['entry_product']    = 'Sản phẩm:';
 $_['entry_manufacturer']    = 'Nhà sản xuất:';
 $_['entry_information']    = 'Thông tin:';
@@ -69,14 +69,14 @@ $_['entry_html']    = 'HTML:';
 $_['entry_parent_id']    = 'Parent ID:';
 $_['entry_menuclass']    = 'Menu Class:';
 $_['entry_showtitle']    = 'Hiển thị tiêu đề:';
-$_['entry_isgroup']    = 'Is Group:';
-$_['entry_iscontent']    = 'Is Content:';
+$_['entry_isgroup']    = 'Là nhóm:';
+$_['entry_iscontent']    = 'Có nội dung:';
 $_['entry_default_column_width']    = 'Chiều rộng mặc định cột (SpanX): ';
-$_['entry_columns']    = 'Columns';
+$_['entry_columns']    = 'Số cột';
 $_['entry_detail_columns'] = 'Chi tiết chiều rộng cột';
 $_['entry_sub_menutype'] = 'Sub Menu Type';
 $_['entry_submenu_content'] = 'Nội dung menu con';
-$_['text_none'] = 'None';
+$_['text_none'] = 'Không';
 $_['text_explain_input_html'] = 'Nếu nội dung của menu là HTML thì các menu con của nó sẽ không được hiển thị';
 $_['text_explain_input_auto'] = 'Nhập ký tự hoặc từ cần tìm kiếm';
 $_['text_explain_submenu_cols'] = 'Nhập chi tiết chiều rộng cho từng cột con trong khoảng giá trị từ 1 đến 12.<br>Ví dụ: col1=3 col3=5';
@@ -98,47 +98,48 @@ $_['error_dimension']     = 'Bắt buộc phải nhập chiều dài &amp; cao!'
 $_['error_missing_title'] = 'Vui lòng nhập tiêu đề menu cho từng ngôn ngữ';
 $_['text_explain_drapanddrop'] = 'Để sắp xếp thứ tự, kéo và thả menu tương ứng và nhấn nút "Cập nhật" để lưu lại';
 /***/
-$_['menu_dashboard'] = "Dashboard";
-$_['menu_manage_categories'] = "Categories";
-$_['menu_manage_blogs'] = "Quản lý Blogs";
-$_['menu_addblog'] = "Thêm Blog";
+$_['menu_dashboard'] = "Bảng làm việc";
+$_['menu_manage_categories'] = "Danh mục";
+$_['menu_manage_blogs'] = "Quản lý bài viết";
+$_['menu_addblog'] = "Thêm bài viết";
 $_['menu_comment'] = "Các bình luận";
 $_['menu_module_setting'] = "Cài đặt chung";
 $_['menu_information'] = "Thông tin";
 /* DASHBOARD PAGE **/
-$_['panel_page_heading_title'] = 'Dashboard';
-$_['text_quickicons'] = 'Quick Icons';
-$_['module_latest'] = 'Blog mới nhất';
-$_['module_comment'] = 'Blog Comment';
-$_['module_category'] = 'Blog Category Menu';
+$_['panel_page_heading_title'] = 'Bảng làm việc';
+$_['text_quickicons'] = 'Lối tắt';
+$_['module_latest'] = 'Bài viết mới nhất';
+$_['module_comment'] = 'Nhận xét bài viết';
+$_['module_category'] = 'Trình đơn danh mục bài viết';
 $_['text_modules_urls'] = 'Định dạng URLs';
 
 $_['latest_blog'] = 'Blog gần nhất';
 $_['most_read'] = 'Đọc nhiều nhất';
 $_['latest_comment'] = 'Bình luận gần nhất';
 
-$_['databroad_categories'] = 'Categories';
-$_['databroad_add_category'] = 'Thêm Category';
-$_['databroad_blogs'] = 'Blogs';
-$_['databroad_add_blog'] = 'Thêm Blog';
+$_['databroad_categories'] = 'Danh mục';
+$_['databroad_add_category'] = 'Thêm danh mục';
+$_['databroad_blogs'] = 'Các bài viết';
+$_['databroad_add_blog'] = 'Thêm bài viết';
 $_['databroad_comment'] = 'Bình luận';
 $_['databroad_modules_setting'] = 'Cài đặt modules';
 
 /** CATEGORY PAGE **/
-$_['category_page_heading_title'] = "Quản lý categorys";
-$_['text_tree_category_menu'] = "Categories Tree Menu"; 
+$_['category_page_heading_title'] = "Quản lý danh mục";
+$_['text_tree_category_menu'] = "Trình đơn cây danh mục"; 
 $_['text_category_information'] = "Thông tin"; 
 $_['text_filter_title'] = 'Lọc theo tiêu đề';
 $_['text_reset'] = 'Reset';
 $_['text_position'] = 'Vị trí';
 /** BLOGS PAGE **/
-$_['blogs_page_heading_title'] = 'Quản lý các blog';
+$_['blogs_page_heading_title'] = 'Quản lý các bài viết';
 $_['entry_title'] = "Tiêu đề";
 $_['button_create_blog'] = 'Tạo blog';
 $_['text_created'] = 'Ngày tạo';
 $_['text_hits'] = 'Lượt xem';
 $_['entry_tags'] = 'Tags';
-$_['text_explain_tags'] = 'example: fashion, smart,funny';
+$_['entry_featured'] = 'Nổi bật';
+$_['text_explain_tags'] = 'Ví dụ: fashion, smart, funny';
 $_['text_facebook_id_explain'] = 'Register A Comment Box, Then Get Application ID in Script Or Register Facebook Application ID to moderate comments';
 
 $_['text_error'] = 'Rất tiếc, Chúng tôi đang tiến hành update, vui lòng quay lại sau. Xin cảm ơn';

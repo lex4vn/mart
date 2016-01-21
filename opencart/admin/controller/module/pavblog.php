@@ -78,12 +78,6 @@ class ControllerModulePavblog extends Controller {
    		);
 
    		$this->mdata['breadcrumbs'][] = array(
-       		'text'      => $this->language->get('text_module'),
-			'href'      => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
-   		);
-
-   		$this->mdata['breadcrumbs'][] = array(
        		'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('module/pavblog', 'token=' . $this->session->data['token'], 'SSL'),
       		'separator' => ' :: '
