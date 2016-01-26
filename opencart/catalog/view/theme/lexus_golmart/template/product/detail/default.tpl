@@ -232,7 +232,7 @@
 
                                 <div class="cart pull-left">
                                 <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-lg btn-primary"><?php echo $button_cart; ?></button>
-                                <a href="http://localhost/xwatch/mart/opencart/index.php?route=checkout/booking" id="button-book" class="btn btn-lg btn-primary" onclick="cart.addcart('<?php echo $product_id; ?>');">Đặt hàng ngay</a>
+                                <a href="<?php echo $booking;?>" id="button-book" class="btn btn-lg btn-primary" onclick="cart.addcart('<?php echo $product_id; ?>');">Đặt hàng ngay</a>
                                 </div>
                                 </div>
                                 <div class="clearfix">

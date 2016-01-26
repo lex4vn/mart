@@ -129,7 +129,7 @@
 					<div class="tab-pane active" id="manage-menus">
 						<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
 							<input type="hidden" value="" name="save_mode" id="save_mode"/>
-							<div class="buttons hidden">
+							<div class="buttons">
 								<span class="" style="font-weight:bold;"><?php echo $objlang->get('entry_filter_store');?></span>
 								<select class="form-control" name="stores" id="pavstores" style="width: 20%;">
 									<?php foreach($stores as $store):?>

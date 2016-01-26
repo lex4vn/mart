@@ -10,46 +10,6 @@
 ?>
 
 <header id="header-layout"  class="header-v1">
-
-<nav id="topbar">
-  <div class="container">
-    <div class="topbar-wrap clearfix">
-     <div class="quick-setting pull-left hidden-lg hidden-md hidden-sm">
-        <div class="quickaccess-toggle">
-          <span><?php echo $objlang->get('text_setting');?></span><i class="fa fa-angle-down"></i>
-          <div class="inner-toggle">
-            <ul class="">
-              <li><a class="" href="<?php echo $account; ?>"><span class="fa fa-user"></span><?php echo $text_account; ?></a></li>
-              <li><a class="shoppingcart" href="<?php echo $shopping_cart; ?>"><span class="fa fa-shopping-cart"></span><?php echo $text_shopping_cart; ?></a></li>
-              <li><a class="last" href="<?php echo $checkout; ?>"><span class="fa fa-file"></span><?php echo $text_checkout; ?></a></li> 
-              <?php if ($logged) { ?>
-                  <li><a href="<?php echo $logout; ?>"><span class="fa fa-unlock"></span><?php echo $text_logout; ?></a></li>
-                 <?php } else { ?>
-                  <li><a href="<?php echo $register; ?>"><span class="fa fa-pencil"></span><?php echo $text_register; ?></a></li>
-                  <li><a href="<?php echo $login; ?>"><span class="fa fa-unlock"></span><?php echo $text_login; ?></a> </li>
-                <?php } ?>
-            </ul>
-          </div>
-        </div>
-      </div>  
-
-      <div class="login pull-right hidden-xs">
-        <ul class="links">
-          <li><a class="" href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-          <li><a class="wishlist" href="<?php echo $wishlist; ?>" id="wishlist-total"><?php echo $text_wishlist; ?></a></li>
-          <?php if ($logged) { ?>
-            <li>  <a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-            <?php } else { ?>
-            <li>  <a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-            <li>  <a href="<?php echo $login; ?>"><?php echo $text_login; ?></a>  </li>
-            <?php } ?>
-        </ul>
-      </div>
-   
-    </div>
- 
-  </div>
-</nav>
 <div class="header-top">
   <div class="container">
     <div class="inside">
