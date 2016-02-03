@@ -65,32 +65,32 @@
 						<table class="table">
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_large_image_demension');?></td>
-								<td class="col-sm-8">
-									<input style="width:20%"style="width:20%" class="form-control"name="pavblog[general_lwidth]" value="<?php echo $general_setting['general_lwidth'];?>" size="3"/> 
+								<td class="col-sm-8 form-inline">
+									<input class="form-control"name="pavblog[general_lwidth]" value="<?php echo $general_setting['general_lwidth'];?>" size="3"/> 
 									x 
-									<input style="width:20%"class="form-control"size="3" name="pavblog[general_lheight]" value="<?php echo $general_setting['general_lheight'];?>" />
+									<input class="form-control"size="3" name="pavblog[general_lheight]" value="<?php echo $general_setting['general_lheight'];?>" />
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_small_image_demension');?></td>
-								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[general_swidth]" value="<?php echo $general_setting['general_swidth'];?>" size="3"/>
+								<td class="col-sm-8 form-inline">
+									<input class="form-control"name="pavblog[general_swidth]" value="<?php echo $general_setting['general_swidth'];?>" size="3"/>
 									x 
-									<input style="width:20%"class="form-control"size="3" name="pavblog[general_sheight]" value="<?php echo $general_setting['general_sheight'];?>" />
+									<input class="form-control"size="3" name="pavblog[general_sheight]" value="<?php echo $general_setting['general_sheight'];?>" />
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_xsmall_image_demension');?></td>
-								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[general_xwidth]" value="<?php echo $general_setting['general_xwidth'];?>" size="3"/> 
+								<td class="col-sm-8 form-inline">
+									<input class="form-control"name="pavblog[general_xwidth]" value="<?php echo $general_setting['general_xwidth'];?>" size="3"/> 
 									x 
-									<input style="width:20%"class="form-control"size="3" name="pavblog[general_xheight]" value="<?php echo $general_setting['general_xheight'];?>" />
+									<input class="form-control" size="3" name="pavblog[general_xheight]" value="<?php echo $general_setting['general_xheight'];?>" />
 								</td>
 							</tr>
 							
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_rss_limit');?></td>
-								<td class="col-sm-8"><input style="width:20%"class="form-control"size="3" name="pavblog[rss_limit_item]" value="<?php echo $general_setting['rss_limit_item'];?>" /></td>
+								<td class="col-sm-8 form-inline"><input class="form-control"size="3" name="pavblog[rss_limit_item]" value="<?php echo $general_setting['rss_limit_item'];?>" /></td>
 							</tr>
 							<tr>
 								<td colspan="2">
@@ -99,38 +99,38 @@
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('text_keyword_listing_blogs_page');?></td>
-								<td class="col-sm-8"><input style="width:20%"class="form-control"size="30" name="pavblog[keyword_listing_blogs_page]" value="<?php echo $general_setting['keyword_listing_blogs_page'];?>" /></td>
+								<td class="col-sm-8 form-inline"><input class="form-control"size="30" name="pavblog[keyword_listing_blogs_page]" value="<?php echo $general_setting['keyword_listing_blogs_page'];?>" /></td>
 							</tr>	
 						</table>
 					</div>
 					<!-- end div tab-general -->
 
-					<div id="tab-category" class="tab-pane">
+					<div id="tab-category" class="tab-pane form-inline">
 						<table class="table">
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_children_columns');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[children_columns]" value="<?php echo $general_setting['children_columns'];?>" size="10"/>
+									<input class="form-control"name="pavblog[children_columns]" value="<?php echo $general_setting['children_columns'];?>" size="10"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_category_image_demension');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[general_cwidth]" value="<?php echo $general_setting['general_cwidth'];?>" size="3"/> 
+									<input class="form-control"name="pavblog[general_cwidth]" value="<?php echo $general_setting['general_cwidth'];?>" size="3"/> 
 									x 
-									<input style="width:20%"class="form-control"size="3" name="pavblog[general_cheight]" value="<?php echo $general_setting['general_cheight'];?>" />
+									<input class="form-control"size="3" name="pavblog[general_cheight]" value="<?php echo $general_setting['general_cheight'];?>" />
 								</td>
 							</tr> 
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_limit_leading_blogs');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[cat_limit_leading_blog]" value="<?php echo $general_setting['cat_limit_leading_blog'];?>" size="10"/>
+									<input class="form-control"name="pavblog[cat_limit_leading_blog]" value="<?php echo $general_setting['cat_limit_leading_blog'];?>" size="10"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_limit_secondary_blogs');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[cat_limit_secondary_blog]" value="<?php echo $general_setting['cat_limit_secondary_blog'];?>" size="10"/>
+									<input class="form-control"name="pavblog[cat_limit_secondary_blog]" value="<?php echo $general_setting['cat_limit_secondary_blog'];?>" size="10"/>
 								</td>
 							</tr>
 							
@@ -138,7 +138,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_leading_image_types');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_leading_image_type]">
+									<select  class="form-control"name="pavblog[cat_leading_image_type]">
 									<?php foreach( $image_types as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_leading_image_type']){?>selected="selected"<?php } ?> ><?php echo $v;?></option>	
 									<?php } ?>
@@ -148,7 +148,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_secondary_image_types');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_secondary_image_type]">
+									<select  class="form-control"name="pavblog[cat_secondary_image_type]">
 									<?php foreach( $image_types as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_secondary_image_type']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -158,19 +158,19 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_columns_leading_blogs');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[cat_columns_leading_blog]" value="<?php echo $general_setting['cat_columns_leading_blogs'];?>" size="10"/>
+									<input class="form-control"name="pavblog[cat_columns_leading_blog]" value="<?php echo $general_setting['cat_columns_leading_blogs'];?>" size="10"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_columns_secondary_blogs');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[cat_columns_secondary_blogs]" value="<?php echo $general_setting['cat_columns_secondary_blogs'];?>" size="10"/>
+									<input class="form-control"name="pavblog[cat_columns_secondary_blogs]" value="<?php echo $general_setting['cat_columns_secondary_blogs'];?>" size="10"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_title');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_title]">
+									<select  class="form-control"name="pavblog[cat_show_title]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_title']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -180,7 +180,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_description');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_description]">
+									<select  class="form-control"name="pavblog[cat_show_description]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_description']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -190,7 +190,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_readmore');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_readmore]">
+									<select  class="form-control"name="pavblog[cat_show_readmore]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_readmore']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -200,7 +200,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_image');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_image]">
+									<select  class="form-control"name="pavblog[cat_show_image]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_image']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -211,7 +211,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_author');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_author]">
+									<select  class="form-control"name="pavblog[cat_show_author]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_author']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -221,7 +221,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_category');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_category]">
+									<select  class="form-control"name="pavblog[cat_show_category]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_category']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -231,7 +231,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_created');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_created]">
+									<select  class="form-control"name="pavblog[cat_show_created]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_created']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -241,7 +241,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_hits');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_hits]">
+									<select  class="form-control"name="pavblog[cat_show_hits]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_hits']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -251,7 +251,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_comment_counter');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[cat_show_comment_counter]">
+									<select  class="form-control"name="pavblog[cat_show_comment_counter]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['cat_show_comment_counter']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -262,12 +262,12 @@
 					</div>
 					<!-- end div tab-category -->
 
-					<div id="tab-blog" class="tab-pane">
+					<div id="tab-blog" class="tab-pane form-inline">
 						<table class="table">
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_blog_image_types');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_image_type]">
+									<select  class="form-control"name="pavblog[blog_image_type]">
 									<?php foreach( $image_types as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_image_type']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -277,7 +277,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_title');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_title]">
+									<select  class="form-control"name="pavblog[blog_show_title]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_title']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -288,7 +288,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_image');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_image]">
+									<select  class="form-control"name="pavblog[blog_show_image]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_image']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -299,7 +299,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_author');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_author]">
+									<select  class="form-control"name="pavblog[blog_show_author]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_author']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -309,7 +309,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_category');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_category]">
+									<select  class="form-control"name="pavblog[blog_show_category]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_category']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -319,7 +319,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_created');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_created]">
+									<select  class="form-control"name="pavblog[blog_show_created]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_created']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -329,7 +329,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_comment_counter');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_comment_counter]">
+									<select  class="form-control"name="pavblog[blog_show_comment_counter]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_comment_counter']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -339,7 +339,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_hits');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_hits]">
+									<select  class="form-control"name="pavblog[blog_show_hits]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_hits']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -350,7 +350,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_show_comment_form');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[blog_show_comment_form]">
+									<select  class="form-control"name="pavblog[blog_show_comment_form]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['blog_show_comment_form']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -360,7 +360,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_comment_engine');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[comment_engine]">
+									<select  class="form-control"name="pavblog[comment_engine]">
 										<?php foreach( $comment_engine as $key => $engine ){?>
 											<option value="<?php echo $key;?>" <?php if($key==$general_setting['comment_engine']){?>selected="selected"<?php } ?>><?php echo $engine;?></option>
 										<?php } ?>
@@ -369,7 +369,7 @@
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_diquis_account');?></td>
-								<td class="col-sm-8"><input style="width:20%"class="form-control"name="pavblog[diquis_account]" value="<?php echo $general_setting['diquis_account'];?>" size="30"/>
+								<td class="col-sm-8"><input class="form-control"name="pavblog[diquis_account]" value="<?php echo $general_setting['diquis_account'];?>" size="30"/>
 								<br>
 									<a href="https://disqus.com/admin/signup/" target="_blank"><?php echo $objlang->get('text_signup_diquis');?> </a>
 								</td>
@@ -377,24 +377,24 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_facebook_appid');?></td>
 								<td class="col-sm-8">
-									<input style="width:20%"class="form-control"name="pavblog[facebook_appid]" value="<?php echo $general_setting['facebook_appid'];?>" size="30"/>
+									<input class="form-control"name="pavblog[facebook_appid]" value="<?php echo $general_setting['facebook_appid'];?>" size="30"/>
 									<p><i><?php echo $objlang->get('text_facebook_id_explain');?></i></p>
 									<a target="_blank" href="http://developers.facebook.com/docs/reference/plugins/comments/">http://developers.facebook.com/docs/reference/plugins/comments/</a>
 								</td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_comment_limit');?></td>
-								<td class="col-sm-8"><input style="width:20%"class="form-control"name="pavblog[comment_limit]" value="<?php echo $general_setting['comment_limit'];?>" size="30"/></td>
+								<td class="col-sm-8"><input class="form-control"name="pavblog[comment_limit]" value="<?php echo $general_setting['comment_limit'];?>" size="30"/></td>
 							</tr>
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_facebook_width');?></td>
-								<td class="col-sm-8"><input style="width:20%"class="form-control"name="pavblog[facebook_width]" value="<?php echo $general_setting['facebook_width'];?>" size="30"/></td>
+								<td class="col-sm-8"><input class="form-control"name="pavblog[facebook_width]" value="<?php echo $general_setting['facebook_width'];?>" size="30"/></td>
 							</tr>
 							
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_auto_publish_comment');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[auto_publish_comment]">
+									<select  class="form-control"name="pavblog[auto_publish_comment]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['auto_publish_comment']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -404,7 +404,7 @@
 							<tr>
 								<td class="col-sm-4"><?php echo $objlang->get('entry_enable_recaptcha');?></td>
 								<td class="col-sm-8">
-									<select style="width:20%" class="form-control"name="pavblog[enable_recaptcha]">
+									<select  class="form-control"name="pavblog[enable_recaptcha]">
 									<?php foreach( $yesno as $k => $v ) { ?>
 										<option value="<?php echo $k;?>" <?php if($k==$general_setting['enable_recaptcha']){?>selected="selected"<?php } ?>><?php echo $v;?></option>	
 									<?php } ?>
@@ -442,7 +442,7 @@
 									?>
 									<div id="tab-module-<?php echo $key;?>" class="tab-pane">
 										<div class="tab-inner">
-											<input style="width:20%"class="form-control"type="hidden" name="pavblog[modules][]" value="<?php echo $key;?>"/>
+											<input class="form-control"type="hidden" name="pavblog[modules][]" value="<?php echo $key;?>"/>
 											<?php
 											if( file_exists($modules_tpl) ){
 												require_once($modules_tpl);

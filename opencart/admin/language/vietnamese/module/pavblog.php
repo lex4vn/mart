@@ -37,7 +37,7 @@ $_['entry_keyword'] = '<b>Từ khóa SEO</b>';
 
 $_['help_entry_keyword'] = '<i>*Không sửa dụng khoảng trắng hoặc thay nó bởi ký tự - và đảm bảo từ khóa là hoàn toàn duy nhất.</i>';
 
-$_['text_keyword_listing_blogs_page'] = 'Key Word - Listing Blog Page<p><i>Keyword using for listing blog by tag or by user</i>:<br> Example: http://www.domain.com/blogs?tag=opencart</p>';
+$_['text_keyword_listing_blogs_page'] = 'Key Word - Listing Bài viết Page<p><i>Keyword using for listing blog by tag or by user</i>:<br> Example: http://www.domain.com/blogs?tag=opencart</p>';
 
 $_['text_image_manager']   = 'Quản lý ảnh';
 $_['text_front_page'] = 'Trang phía trước';
@@ -134,7 +134,7 @@ $_['text_position'] = 'Vị trí';
 /** BLOGS PAGE **/
 $_['blogs_page_heading_title'] = 'Quản lý bài viết';
 $_['entry_title'] = "Tiêu đề";
-$_['button_create_blog'] = 'Tạo blog';
+$_['button_create_blog'] = 'Tạo bài viết';
 $_['text_created'] = 'Ngày tạo';
 $_['text_hits'] = 'Lượt xem';
 $_['entry_tags'] = 'Tags';
@@ -197,8 +197,8 @@ $_['entry_show_comment_counter'] = 'Hiển thị số bình luận';
 $_['entry_show_description'] = 'Hiển thị mô tả' ;
 $_['entry_show_readmore'] = 'Hiển thị Readmore' ;
 $_['entry_show_hits'] = 'Hiển thị lượt xem' ;
-$_['text_blog_setting'] = 'Cài đặt blog';
-$_['entry_blog_image_types'] = 'Blog Image Type';
+$_['text_blog_setting'] = 'Cài đặt bài viết';
+$_['entry_blog_image_types'] = 'Bài viết Image Type';
 $_['blog_secondary_image_types'] = 'Secondary Image Types';
 $_['blog_show_title'] = 'Hiển thị tiêu đề';
 $_['blog_show_image'] = 'Hiển thị ảnh';
@@ -214,9 +214,9 @@ $_['text_categories_module'] = 'Danh mục';
 $_['text_latest_blog_module'] = 'Bài viết mới';
 $_['text_latest_comment_module'] = 'Bình luận mới';
 
-$_['entry_columns_secondary_blogs'] = 'Columns Secondary Blogs';
-$_['entry_columns_leading_blogs'] = 'Column Leading Blogs';
-$_['entry_columns_secondary_blogs 	'] = 'Column Secondary Blogs';
+$_['entry_columns_secondary_blogs'] = 'Columns Secondary Bài viếts';
+$_['entry_columns_leading_blogs'] = 'Column Leading Bài viếts';
+$_['entry_columns_secondary_blogs 	'] = 'Column Secondary Bài viếts';
 
 
 $_['entry_comment_engine'] = 'Comment Engine';
@@ -255,7 +255,7 @@ $_['button_module_add'] = 'Thêm module';
 // PavblogComment
 $_['entry_carousel']    = 'Giới hạn số sản phẩm:';
 
-// PavBlogLatest
+// PavBài viếtLatest
 $_['entry_prefixclass'] = 'Prefix Class';
 $_['entry_tabs'] = 'Kiểu danh sách sản phẩm';
 
