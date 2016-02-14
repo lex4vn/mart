@@ -18,7 +18,7 @@
 <?php } ?>
 <h4><?php echo $objlang->get('text_category_information');?></h4>
 
-<ul class="nav nav-tabs" id="language-<?php echo $module_row; ?>">
+<ul class="nav nav-tabs hidden" id="language-<?php echo $module_row; ?>">
 	<?php foreach ($languages as $language) { ?>
 	<li>
 		<a href="#tab-language-<?php echo $language['language_id']; ?>" data-toggle="tab">
@@ -33,7 +33,7 @@
 	<div class="tab-pane" id="tab-language-<?php echo $language['language_id']; ?>">
 		<table class="table no-border">
 			<tr>
-				<td class="col-sm-2"><?php echo $objlang->get('Title');?></td>
+				<td class="col-sm-2"><?php echo $objlang->get('entry_title');?></td>
 				<td class="col-sm-10">
 					<input class="form-control" name="pavblog_category_description[<?php echo $language['language_id'];?>][title]" value="<?php echo $menu_description[$language['language_id']]['title'];?>"/>
 				</td>

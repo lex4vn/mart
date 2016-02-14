@@ -23,11 +23,6 @@
 				<a class="btn btn-danger" title="<?php echo $button_cancel; ?>" href="<?php echo $cancel; ?>" ><?php echo $button_cancel; ?></a>
 			</div>
 			<h1><?php echo $heading_title; ?></h1>
-			<ul class="breadcrumb">
-				<?php foreach ($breadcrumbs as $breadcrumb) { ?>
-				<li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-				<?php } ?>
-			</ul>
 		</div>
 	</div><!-- end div .page-header -->
 
@@ -60,9 +55,9 @@
 				<div class="megamenu">
 					<div class="tree-megamenu col-ms-4">
 						<h4><?php echo $objlang->get('text_tree_category_menu');?></h4>
-						<input class="btn btn-success btn-sm" type="button" name="serialize" id="serialize" value="Update Tree" />
+						<input class="btn btn-success btn-sm" type="button" name="serialize" id="serialize" value="<?php echo $objlang->get('button_update');?>" />
 						<?php echo $tree; ?>
-						<input class="btn btn-success btn-sm" type="button" name="serialize" id="serialize_2" value="Update Tree" />
+						<input class="btn btn-success btn-sm" type="button" name="serialize" id="serialize_2" value="<?php echo $objlang->get('button_update');?>" />
 						<p class="note"><i><?php echo $objlang->get("text_explain_drapanddrop");?></i></p>
 					</div>
 					

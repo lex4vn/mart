@@ -51,9 +51,10 @@
 						<table class="table no-border">
 							<tr>
 								<td class="col-sm-4"><input placeholder="<?php echo $objlang->get('text_filter_title');?>" class="form-control" name="filter[title]" value="<?php echo $filter['title'];?>" size="50"></td>
-								<td class="col-sm-6"><?php //echo $objlang->get('text_category');?><?php echo $menus;?></td>
-								<td class="col-sm-2">
-									<button class="btn btn-primary btn-sm" type="submit" name="submit"><?php echo $objlang->get('text_filter');?></button> <a class="btn btn-warning btn-sm" href="<?php echo $action_reset;?>"><?php echo $objlang->get('text_reset');?></a>
+								<td class="col-sm-4"><?php //echo $objlang->get('text_category');?><?php echo $menus;?></td>
+								<td class="col-sm-4">
+									<button class="btn btn-primary btn-sm" type="submit" name="submit"><?php echo $objlang->get('text_filter');?></button>
+									<a class="btn btn-warning btn-sm" href="<?php echo $action_reset;?>"><?php echo $objlang->get('text_reset');?></a>
 								</td>
 							</tr>
 						</table>
@@ -68,7 +69,7 @@
 									</td>
 									<td class="left"><?php echo $objlang->get("entry_title");?></td>
 									<td class="center" width="200"><?php echo $objlang->get('text_position');?>
-										<a class="btn btn-primary btn-xs" onclick="$('#do-action').val('position');$('#form').submit();" class="button"><?php echo $objlang->get("save"); ?></a>
+										<a class="btn btn-primary btn-xs" onclick="$('#do-action').val('position');$('#form').submit();" class="button"><?php echo $objlang->get("button_save"); ?></a>
 									</td>
 									<td class="right"  width="100"><?php echo $objlang->get('text_status');?></td>
 									<td class="right"  width="100"><?php echo $objlang->get('text_created');?></td>
@@ -83,7 +84,7 @@
 									<td width="1" style="text-align: center;">
 										<input type="checkbox" name="selected[]" value="<?php echo $blog['blog_id'];?>">
 									</td>
-									<td class="left"><?php echo $blog['title'];?></td>
+									<td class="left"><a href="<?php echo sprintf($edit_link, $blog['blog_id']) ?>"><?php echo $blog['title'];?></a></td>
 									<td class="center"  ><input class="form-control" name="position[<?php echo $blog['blog_id'];?>]" value="<?php echo $blog['position'];?>" style="width:40%"></td>
 									<td class="right"><?php echo ($blog['status']?$objlang->get('text_enable'):$objlang->get('text_disable'));?></td>
 									<td class="right"><?php echo $blog['created'];?></td>

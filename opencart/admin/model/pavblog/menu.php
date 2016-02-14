@@ -67,7 +67,7 @@ class Modelpavblogmenu extends Model {
 			}
 		}
 	
-		$output ='<option value="1">ROOT</option>';	
+		$output ='<option value="1">Danh mục gốc</option>';	
 		$output .= $this->genOption( 1 ,1, $selected );
 	
 		return $output ;
@@ -82,7 +82,7 @@ class Modelpavblogmenu extends Model {
 		}
 		
 		$output = '<select name="'.$name.'" >';
-		$output .='<option value="1">ROOT</option>';	
+		$output .='<option value="1">Danh mục gốc</option>';	
 		$output .= $this->genOption( 1 ,1, $selected );
 		$output .= '</select>';
 		return $output ;
@@ -268,7 +268,7 @@ class Modelpavblogmenu extends Model {
 (1, '', 0, 2, NULL, NULL, NULL, NULL, NULL, '1', '', 2, 1, '1', 0, 1, 0, 0, 0, NULL, NULL, 0, 'top', NULL, NULL, NULL, NULL, -5, 34, 47);";
 
 			$sql[] = "INSERT INTO `".DB_PREFIX."pavblog_category_description` (`category_id`, `language_id`, `title`, `description`) VALUES
-(1, 1, 'ROOT', 'Menu Root');";
+(1, 1, 'Danh mục gốc', 'Menu Root');";
 			
 			foreach( $sql as $q ){
 				$query = $this->db->query( $q );

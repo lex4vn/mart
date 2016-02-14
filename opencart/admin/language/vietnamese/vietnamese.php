@@ -90,6 +90,7 @@ $_['button_send']             = 'Gửi';
 $_['button_shipping']         = 'Áp dụng Shipping';
 $_['button_shopping']         = 'Tiếp tục shopping';
 $_['button_submit']           = 'Submit';
+$_['button_update']     = 'Cập nhật';
 $_['button_update_total']     = 'Tổng lượng upload';
 $_['button_upload']           = 'Chọn File';
 $_['button_view']             = 'Xem';

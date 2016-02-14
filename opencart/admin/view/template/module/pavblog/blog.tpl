@@ -143,7 +143,7 @@
 								</table>
 
 								<!-- Language-Blog -->
-								<ul id="language-blog" class="nav nav-tabs" role="tablist">
+								<ul id="language-blog" class="nav nav-tabs hidden" role="tablist">
 									<?php foreach ($languages as $language) { ?>
 									<li>
 										<a href="#tab-language-<?php echo $language['language_id']; ?>" role="tab" data-toggle="tab"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> <?php echo $language['name']; ?></a>
@@ -156,8 +156,8 @@
 								<div class="tab-pane" id="tab-language-<?php echo $language['language_id']; ?>">
 									<table class="table">
 										<tr>
-											<td><?php echo $objlang->get('entry_title');?></td>
-											<td><input  class="form-control" name="pavblog_blog_description[<?php echo $language['language_id'];?>][title]" size="120" value="<?php echo $pavblog_blog_descriptions[$language['language_id']]['title'];?>"/></td>
+											<td class="col-sm-2"><?php echo $objlang->get('entry_title');?>*</td>
+											<td class="col-sm-10"><input  class="form-control" name="pavblog_blog_description[<?php echo $language['language_id'];?>][title]" size="120" value="<?php echo $pavblog_blog_descriptions[$language['language_id']]['title'];?>"/></td>
 										</tr>
 										<tr>
 											<td><?php echo $objlang->get('entry_description');?></td>

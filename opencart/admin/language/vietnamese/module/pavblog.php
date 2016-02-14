@@ -29,11 +29,11 @@ $_['text_bottom3']   = 'Bên dưới 3';
 $_['text_footer_top']   = 'Footer bên trên';
 $_['text_footer_center']   = 'Footer giữa';
 $_['text_footer_bottom']   = 'Footer bên dưới';
-$_['text_create_new'] = 'Thêm mới Category';
-$_['text_edit_menu'] = 'Chỉnh sửa : %s  (ID:%s)';
+$_['text_create_new'] = '<b>Thêm mới danh mục</b>';
+$_['text_edit_menu'] = '<b>Chỉnh sửa : %s  (ID:%s)</b>';
 $_['all_page']   = 'Tất cả các trang';
-$_['text_seo_data'] = 'SEO Data';
-$_['entry_keyword'] = '<b>Từ khóa SEO</b>';
+$_['text_seo_data'] = '<b>Cấu hình SEO cho danh mục</b>';
+$_['entry_keyword'] = 'Từ khóa';
 
 $_['help_entry_keyword'] = '<i>*Không sửa dụng khoảng trắng hoặc thay nó bởi ký tự - và đảm bảo từ khóa là hoàn toàn duy nhất.</i>';
 
@@ -66,7 +66,7 @@ $_['entry_product']    = 'Sản phẩm:';
 $_['entry_manufacturer']    = 'Nhà sản xuất:';
 $_['entry_information']    = 'Thông tin:';
 $_['entry_html']    = 'HTML:';
-$_['entry_parent_id']    = 'Parent ID:';
+$_['entry_parent_id']    = 'Danh mục:';
 $_['entry_menuclass']    = 'Menu Class:';
 $_['entry_showtitle']    = 'Hiển thị tiêu đề:';
 $_['entry_isgroup']    = 'Là nhóm:';
@@ -129,7 +129,7 @@ $_['category_page_heading_title'] = "Quản lý danh mục";
 $_['text_tree_category_menu'] = "Trình đơn cây danh mục"; 
 $_['text_category_information'] = "Thông tin"; 
 $_['text_filter_title'] = 'Lọc theo tiêu đề';
-$_['text_reset'] = 'Thiết lập lại';
+$_['text_reset'] = 'Loại bỏ';
 $_['text_position'] = 'Vị trí';
 /** BLOGS PAGE **/
 $_['blogs_page_heading_title'] = 'Quản lý bài viết';
@@ -145,9 +145,9 @@ $_['text_facebook_id_explain'] = 'Register A Comment Box, Then Get Application I
 $_['text_error'] = 'Rất tiếc, chúng tôi đang tiến hành cập nhật, vui lòng quay lại sau. Xin cảm ơn';
 /** BLOG PAGE **/
 $_['blog_page_heading_title'] = "Chỉnh sửa bài viết"; 
-$_['text_general'] = "Chung"; 
-$_['text_gallery'] = "Thư viện ảnh"; 
-$_['text_meta']   = "Meta - SEO";
+$_['text_general'] = "Tổng quan"; 
+$_['text_gallery'] = "Ảnh"; 
+$_['text_meta']   = "Cấu hình SEO";
 $_['entry_category_id'] = 'Danh mục';
 $_['entry_hits'] = 'Lượt xem';
 $_['entry_created'] = 'Ngày tạo';
@@ -168,8 +168,8 @@ $_['button_publish'] = 'Xuất bản';
 $_['button_unpublish'] = 'Bản nháp';
 $_['text_status'] = 'Trạng thái';
 $_['text_confirm_delete'] = 'Bạn có chắc muốn xóa?';
-$_['text_disable'] = 'Vô hiệu hóa';
-$_['text_enable'] = 'Cho phép';
+$_['text_disable'] = 'Ngưng';
+$_['text_enable'] = 'Hoạt động';
 
 
 /** GENERAL SETTING **/
