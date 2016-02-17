@@ -6,12 +6,11 @@ class ControllerCheckoutBooking extends Controller {
 
         $this->load->language('checkout/booking');
         $data['heading_title'] = $this->language->get('heading_title');
-
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
             $this->session->data['firstname']= $this->request->post['firstname'];
             $this->session->data['address'] = $this->request->post['address'];
             $this->session->data['comment'] = $this->request->post['comment'];
-            $this->session->data['payment'] = $this->request->post['payment_method'];
+            $this->session->data['payment'] = 'cod';
             $this->session->data['email'] = $this->request->post['email'];
             $this->session->data['telephone'] = $this->request->post['telephone'];
             $this->session->data['shipping_address']['country_id'] = 0;
@@ -316,26 +315,6 @@ class ControllerCheckoutBooking extends Controller {
             $data['address'] = $this->request->post['address'];
         } else {
             $data['address'] = '';
-        }
-
-
-
-        if (empty($this->session->data['payment_methods'])) {
-            $data['error_warning'] = sprintf($this->language->get('error_no_payment'), $this->url->link('information/contact'));
-        } else {
-            $data['error_warning'] = '';
-        }
-
-        if (isset($this->request->post['payment_method'])) {
-            $data['payment_methods'] = $this->request->post['payment_method'];
-        } else {
-            $data['payment_methods'] = array();
-        }
-
-        if (isset($this->session->data['payment_method']['code'])) {
-            $data['code'] = $this->session->data['payment_method']['code'];
-        } else {
-            $data['code'] = '';
         }
 
         if (isset($this->request->post['comment'])) {

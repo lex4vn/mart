@@ -633,4 +633,17 @@ input[type="checkbox"]:checked::after, .checkbox input[type="checkbox"]:checked:
     display: none;
     visibility: unset;
 }
+.help{
+    background: #fff;
+    border-radius: 50%;
+    height: 24px;
+    margin-right: 10px;
+    padding: 4px 7px;
+    position: absolute;
+    right: 0;
+    width: 24px;
+}
+.help .fa{
+    color: #66bb6a;
+}
 /* Menu Fix For System -> Layout -> Banner */

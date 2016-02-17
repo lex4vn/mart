@@ -4,6 +4,7 @@ class ControllerCheckoutConfirmBooking extends Controller
 {
     public function index()
     {
+        $this->load->language('checkout/success');
         $order_data = array();
 
         $order_data['totals'] = array();
@@ -38,7 +39,7 @@ class ControllerCheckoutConfirmBooking extends Controller
 
         array_multisort($sort_order, SORT_ASC, $order_data['totals']);
 
-        $this->load->language('checkout/checkout');
+       // $this->load->language('checkout/checkout');
 
         $order_data['invoice_prefix'] = $this->config->get('config_invoice_prefix');
         $order_data['store_id'] = $this->config->get('config_store_id');
@@ -49,7 +50,9 @@ class ControllerCheckoutConfirmBooking extends Controller
         } else {
             $order_data['store_url'] = HTTP_SERVER;
         }
-
+//        if(isset($this->session->data['payment']) || isset($this->session->data['firstname'])|| isset($this->session->data['telephone'])){
+//            $this->response->redirect($this->url->link('common/home'));
+//        }
 
         $order_data['customer_id'] = 0;
         $order_data['customer_group_id'] = '';
@@ -153,11 +156,12 @@ class ControllerCheckoutConfirmBooking extends Controller
                 );
             }
         }
-
-        $order_data['comment'] = $this->session->data['comment'];
+        if (isset($this->session->data['comment'])) {
+            $order_data['comment'] = $this->session->data['comment'];
+        } else {
+            $order_data['comment'] = '';
+        }
         $order_data['total'] = $total;
-
-
         $order_data['affiliate_id'] = 0;
         $order_data['commission'] = 0;
         $order_data['marketing_id'] = 0;
@@ -192,7 +196,7 @@ class ControllerCheckoutConfirmBooking extends Controller
         $this->load->model('checkout/order');
 
         $this->session->data['order_id'] = $this->model_checkout_order->addOrder($order_data);
-        $this->session->data['payment_method']['code'] = $this->session->data['payment'];
+        $this->session->data['payment_method']['code'] = 'cod';
         $this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('cod_order_status_id'));
         unset($this->session->data['shipping_method']);
         unset($this->session->data['shipping_methods']);
@@ -262,14 +266,40 @@ class ControllerCheckoutConfirmBooking extends Controller
                 'text' => $this->currency->format($total['value']),
             );
         }
+        $data['heading_title'] = $this->language->get('heading_title');
+        $data['text_message'] = sprintf($this->language->get('text_guest'), $this->url->link('information/contact'));
+        $data['breadcrumbs'] = array();
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
 
-        $data['payment'] = $this->load->controller('payment/' . $this->session->data['payment']);
-
-
-        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/confirm.tpl')) {
-            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/confirm_booking.tpl', $data));
+        $data['breadcrumbs'][] = array(
+            'text' => $data['heading_title'],
+            'href' => $this->url->link('checkout/booking', '', 'SSL')
+        );
+        if (isset($this->session->data['error'])) {
+            $data['error_warning'] = $this->session->data['error'];
+            unset($this->session->data['error']);
         } else {
-            $this->response->setOutput($this->load->view('default/template/checkout/confirm_booking.tpl', $data));
+            $data['error_warning'] = '';
+        }
+        $data['button_continue'] = $this->language->get('button_continue');
+
+        $data['continue'] = $this->url->link('common/home');
+        $data['payment'] = $this->load->controller('payment/cod');
+        $data['column_left'] = $this->load->controller('common/column_left');
+        $data['column_right'] = $this->load->controller('common/column_right');
+        $data['content_top'] = $this->load->controller('common/content_top');
+        $data['content_bottom'] = $this->load->controller('common/content_bottom');
+        $data['footer'] = $this->load->controller('common/footer');
+        $data['header'] = $this->load->controller('common/header');
+        $this->cart->clear();
+
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/success.tpl')) {
+            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/success.tpl', $data));
+        } else {
+            $this->response->setOutput($this->load->view('default/template/common/success.tpl', $data));
         }
     }
 }

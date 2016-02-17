@@ -7,7 +7,7 @@
             <li><a href="<?php echo $product; ?>"><?php echo $text_product; ?></a></li>
             <li><a href="<?php echo $review; ?>"><?php echo $text_review; ?></a></li>
             <li><a href="<?php echo $filter; ?>"><?php echo $text_filter; ?></a></li>
-            <li class="hidden"><a class="parent"><?php echo $text_attribute; ?></a>
+            <li class="hidden1"><a class="parent"><?php echo $text_attribute; ?></a>
                 <ul>
                     <li><a href="<?php echo $attribute; ?>"><?php echo $text_attribute; ?></a></li>
                     <li><a href="<?php echo $attribute_group; ?>"><?php echo $text_attribute_group; ?></a></li>
@@ -15,17 +15,18 @@
             </li>
             <li><a href="<?php echo $deals; ?>"><?php echo $text_deals; ?></a></li>
             <li class="hidden"><a href="<?php echo $option; ?>"><?php echo $text_option; ?></a></li>
-            <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+            <!-- <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li> -->
         </ul>
     </li>
+    <li class=""><a href="<?php echo $news; ?>"><i class="fa fa-info-circle fa-fw"></i>
+            <span><?php echo $text_news; ?></span></a></li>
     <li><a href="<?php echo $information; ?>"><i class="fa fa-info fa-fw"></i>
             <span><?php echo $text_information; ?></span></a></li>
     <li><a href="<?php echo $banner; ?>"><i class="fa fa-image fa-fw"></i> <span><?php echo $text_banner; ?></span></a>
     </li>
     <li><a href="<?php echo $bannerslideshow; ?>"><i class="fa fa-image fa-fw"></i>
             <span><?php echo $text_bannerslideshow; ?></span></a></li>
-    <li class=""><a href="<?php echo $news; ?>"><i class="fa fa-info-circle fa-fw"></i>
-            <span><?php echo $text_news; ?></span></a></li>
+
     <li><a href="<?php echo $pavverticalmenu; ?>"><i class="fa fa-info-circle fa-fw"></i>
             <span><?php echo $text_pavverticalmenu; ?></span></a></li>
     <li><a href="<?php echo $pavmegamenu; ?>"><i class="fa fa-info-circle fa-fw"></i>
@@ -119,9 +120,9 @@
             <li><a href="<?php echo $analytics; ?>"><?php echo $text_analytics; ?></a></li>
             <li><a href="<?php echo $feed; ?>"><?php echo $text_feed; ?></a></li>
 
-            <li><a href="<?php echo $payment; ?>"><?php echo $text_payment; ?></a></li>
+           <!-- <li><a href="<?php echo $payment; ?>"><?php echo $text_payment; ?></a></li>
             <li><a href="<?php echo $shipping; ?>"><?php echo $text_shipping; ?></a></li>
-            <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li>
+            <li><a href="<?php echo $total; ?>"><?php echo $text_total; ?></a></li> -->
             <?php if ($openbay_show_menu == 1) { ?>
             <li><a class="parent"><?php echo $text_openbay_extension; ?></a>
                 <ul>

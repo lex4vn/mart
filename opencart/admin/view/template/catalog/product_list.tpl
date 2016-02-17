@@ -28,6 +28,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-list"></i> <?php echo $text_list; ?></h3>
+          <a href="https://drive.google.com/open?id=1yVo2DQyfYmk54dHyrDUUyJcUlbQ0uzPoqMHGgxkcieo" target="_blank"><span class="help" title="Hướng dẫn sử dụng"><i class="fa fa-question"></i></span></a>
       </div>
       <div class="panel-body">
         <div class="well">

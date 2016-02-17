@@ -165,29 +165,6 @@
     </fieldset>
 
     <!-- End hông tin khách hàng -->
-
-    <!-- Hình thức thanh toán -->
-    <?php if ($payment_methods) { ?>
-    <fieldset id="account">
-        <legend><?php echo $text_payment_method; ?></legend>
-    <?php foreach ($payment_methods as $payment_method) { ?>
-    <div class="radio">
-        <label>
-            <?php if ($payment_method['code'] == $code || !$code) { ?>
-            <?php $code = $payment_method['code']; ?>
-            <input type="radio" name="payment_method" value="<?php echo $payment_method['code']; ?>" checked="checked"/>
-            <?php } else { ?>
-            <input type="radio" name="payment_method" value="<?php echo $payment_method['code']; ?>"/>
-            <?php } ?>
-            <?php echo $payment_method['title']; ?>
-            <?php if ($payment_method['terms']) { ?>
-            (<?php echo $payment_method['terms']; ?>)
-            <?php } ?>
-        </label>
-    </div>
-    <?php } ?>
-    <?php } ?>
-    <!-- End Hình thức thanh toán -->
     </div>
 
 </div>
