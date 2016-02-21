@@ -164,11 +164,11 @@ class ModelMenuMegamenu extends Model {
 		if( $this->hasChild($parent) ){
 			$data = $this->getNodes( $parent );
 			
-			foreach( $data as $menu ){
-				$select = $selected == $menu['megamenu_id'] ? 'selected="selected"':"";
-				$output .= '<option value="'.$menu['megamenu_id'].'" '.$select.'>'.str_repeat("-",$level) ." ".$menu['title'].' (ID:'.$menu['megamenu_id'].')</option>';
-				$output .= $this->genOption(  $menu['megamenu_id'],$level+1, $selected );
-			}				
+			//foreach( $data as $menu ){
+			//	$select = $selected == $menu['megamenu_id'] ? 'selected="selected"':"";
+			//	$output .= '<option value="'.$menu['megamenu_id'].'" '.$select.'>'.str_repeat("-",$level) ." ".$menu['title'].' (ID:'.$menu['megamenu_id'].')</option>';
+			//	$output .= $this->genOption(  $menu['megamenu_id'],$level+1, $selected );
+			//}				
 		}
 		
 		return $output;

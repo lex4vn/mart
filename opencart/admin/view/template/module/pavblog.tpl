@@ -14,6 +14,7 @@
   <div class="box">
     <div class="heading">
       <h1><img src="view/image/module.png" alt="" /> <?php echo $heading_title; ?></h1>
+	  
       <div class="buttons">
 	  <a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a>
 	  <a onclick="__submit('save-edit')" class="button"><?php echo "Save And Edit"; ?></a>
@@ -83,8 +84,6 @@
 			</div>
 		</div>
 			<input type="hidden" value="" name="save_mode" id="save_mode"/>
-			
-			<div style="font-size:10px;color:#666"><p>Pav Mega Menu is free to use. it's released under GPL/V2. Power By <a href="http://www.pavothemes.com">PavoThemes.Com</a></div>
       </form>
     </div>
   </div>

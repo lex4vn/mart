@@ -48,6 +48,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $heading_title; ?></h3>
+				<a href="https://docs.google.com/document/d/1qFqVLAVJhq3gvuend979Sk-w5sMOXkmEpSaV5jejnco/edit?usp=sharing" target="_blank"><span class="help" title="Hướng dẫn sử dụng"><i class="fa fa-question"></i></span></a>
 			</div>
 			<div class="panel-body">
 				<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">

@@ -95,13 +95,7 @@
 								</ol>
 							</div>
 						</div>
-						<div id="guide-links">
-							<b><?php echo $objlang->get('text_guide_urls');?></b>: 
-							<a href="http://www.pavothemes.com/guides/pavblog/#setup-seo"><?php echo $objlang->get('text_guide_seo');?></a> -
-							<a href="http://www.pavothemes.com/guides/pavblog/#manage-category"><?php echo $objlang->get('text_guide_category');?></a> -
-							<a href="http://www.pavothemes.com/guides/pavblog/#manage-blog"><?php echo $objlang->get('text_guide_blog');?></a> -
-							<a href="http://www.pavothemes.com/guides/pavblog/#module-setting"><?php echo $objlang->get('text_guide_module_setting');?></a>
-						</div>
+
 					</div>
 				</div>
 				<div class="col-sm-5">

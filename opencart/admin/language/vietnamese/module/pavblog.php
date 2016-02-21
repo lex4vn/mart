@@ -175,6 +175,7 @@ $_['text_enable'] = 'Hoạt động';
 /** GENERAL SETTING **/
 $_['entry_children_columns'] = 'Các cột con';
 $_['entry_category_image_demension'] = 'Kích thước ảnh (dài x rộng) ';
+$_['modules_page_heading_title'] = 'Cài đặt';
 $_['modules_page_heading_titleheading_title'] = 'Cài đặt';
 $_['text_general_setting'] = 'Cài đặt chung';
 $_['entry_large_image_demension'] = 'Kích cỡ ảnh lớn (dài x rộng)';
