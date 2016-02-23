@@ -128,7 +128,7 @@
 			</div>
 
 		</div><!-- end div.panel panel-default -->
-		<div id="info" style="font-size:10px;color:#666"><p>Pav Mega Menu is free to use. it's released under GPL/V2. Powered By <a href="http://www.pavothemes.com">PavoThemes.Com</a></div>
+		
 
 	</div><!-- container-fluid -->
 </div>
