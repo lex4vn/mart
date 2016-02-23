@@ -1,6 +1,7 @@
 <?php
 // Heading
 $_['heading_title']        = '<strong>Quản lý trang chủ</strong>';
+$_['subheading']        = '<strong>Quản lý trang chủ</strong>';
 $_['heading_banner_title'] = 'Xây dựng trang chủ';
 
 $_['tab_groups']           = 'Bố cục trang chủ';

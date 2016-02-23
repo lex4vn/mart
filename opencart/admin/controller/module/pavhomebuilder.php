@@ -191,7 +191,7 @@ class ControllerModulepavhomebuilder extends Controller {
 		}else {
 			$module_info = $default;
 			$this->mdata['selectedid'] = 0;
-			$this->mdata['subheading'] = 'Create New A Home Page Module';
+			$this->mdata['subheading'] = $this->language->get('heading_title');
 			$this->mdata['action'] = $this->url->link('module/pavhomebuilder', 'token=' . $this->session->data['token'], 'SSL');
 		}
 	 	

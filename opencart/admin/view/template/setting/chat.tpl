@@ -27,6 +27,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_edit_chat; ?></h3>
+        <a href="https://docs.google.com/document/d/10Ev98IC7dz33ef53hTCdvqV0cm8C02-eZFgZyyDd-R8/edit?usp=sharing" target="_blank"><span class="help" title="Hướng dẫn sử dụng"><i class="fa fa-question"></i></span></a>
       </div>
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-setting" class="form-horizontal">

@@ -27,6 +27,7 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title"><i class="fa fa-list"></i> <?php echo $text_list; ?></h3>
+          <a href="https://docs.google.com/document/d/1zvNYDRJ6qMsV_rDj2XLY2Kii4tVD-oUsNrv8zRwz7z8/edit?usp=sharing" target="_blank"><span class="help" title="Hướng dẫn sử dụng"><i class="fa fa-question"></i></span></a>
       </div>
       <div class="panel-body">
         <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form-banner">

@@ -31,9 +31,8 @@
           <a href="https://drive.google.com/open?id=1yVo2DQyfYmk54dHyrDUUyJcUlbQ0uzPoqMHGgxkcieo" target="_blank"><span class="help" title="Hướng dẫn sử dụng"><i class="fa fa-question"></i></span></a>
       </div>
       <div class="panel-body">
-        <div class="well">
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-2">
               <div class="form-group">
                 <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
                 <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
@@ -74,10 +73,11 @@
                   <?php } ?>
                 </select>
               </div>
-              <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
             </div>
+              <div class="col-sm-2"><div class="form-group">
+              <button type="button" id="button-filter" class="btn btn-primary pull-right form-control"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
+             </div></div>
           </div>
-        </div>
         <form action="<?php echo $delete; ?>" method="post" enctype="multipart/form-data" id="form-product">
           <div class="table-responsive">
             <table class="table table-bordered table-hover">

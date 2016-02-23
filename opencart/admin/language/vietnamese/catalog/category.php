@@ -4,7 +4,7 @@ $_['heading_title']          = 'Quản lý danh mục sản phẩm';
 
 // Text
 $_['text_add']               = 'Thêm danh mục sản phẩm';
-$_['text_edit']              = 'Chỉnh sủa danh mục sản phẩm';
+$_['text_edit']              = 'Chỉnh sửa danh mục sản phẩm';
 
 $_['text_success']           = 'Thành công: danh mục đã được thay đổi!';
 $_['text_default']           = 'Mặc định';

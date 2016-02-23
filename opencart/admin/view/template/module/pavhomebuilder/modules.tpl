@@ -40,6 +40,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $subheading; ?></h3> <span></span>
+                <a href="https://docs.google.com/document/d/1Yc-Egm9jbczE8YovVzLRM-KIJM6zNYKSYtYHvDd-l1k/edit?usp=sharing" target="_blank"><span class="help" title="Hướng dẫn sử dụng"><i class="fa fa-question"></i></span></a>
 			</div>
 			<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
 				<input type="hidden" name="pavhomebuilder_module[action]" id="action" value=""/>
