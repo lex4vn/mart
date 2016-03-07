@@ -33,7 +33,7 @@ $_['text_create_new'] = '<b>Thêm mới danh mục</b>';
 $_['text_edit_menu'] = '<b>Chỉnh sửa : %s  (ID:%s)</b>';
 $_['all_page']   = 'Tất cả các trang';
 $_['text_seo_data'] = '<b>Cấu hình SEO cho danh mục</b>';
-$_['entry_keyword'] = 'Từ khóa';
+$_['entry_keyword'] = 'Đường dẫn url chuẩn SEO';
 
 $_['help_entry_keyword'] = '<i>*Không sửa dụng khoảng trắng hoặc thay nó bởi ký tự - và đảm bảo từ khóa là hoàn toàn duy nhất.</i>';
 
